@@ -139,3 +139,6 @@
 .Header_icons_rotation{
   animation: rotation 30s linear infinite
 }
+.paused-animation{
+  animation-play-state: paused;
+}

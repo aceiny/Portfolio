@@ -16,12 +16,9 @@ const Nav_Button = ({
     y,
 } : Props) => {
   return (
-    <button  key={index} style={{
-        transform: `translate(${x}, ${y})`
-     
-    }} className={`absolute`}>
+    <button  key={index} style={{transform: `translate(${x}, ${y})`}} className={`absolute`}>
         <div data-text={text} className=' Header_icons Header_icons_rotation hover:'>
-                    <Image
+            <Image
             data-text={text}
             className='mini-icon '
             src={image}

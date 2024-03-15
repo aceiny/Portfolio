@@ -1,5 +1,6 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import mini_wizard from "@/public/mini-wizard.png"
 import crystal_ball from "@/public/crystal-ball.png"
 import magic_wand from "@/public/magic-wand.png"
@@ -22,7 +23,7 @@ const Nav_Buttons = () => {
         {
             image: magic_wand,
             text: "contact me"
-        }
+        },
     ]
     const angleInc = 360 / NavBtns.length
     return (
@@ -34,6 +35,7 @@ const Nav_Buttons = () => {
                 const y = `calc(${raduis} * ${Math.sin(angleRed)})`
                 return (
                     <Nav_Button
+                        key={index}
                         text={btn.text}
                         image={btn.image}
                         index={index}
