@@ -7,6 +7,7 @@ import magic_wand from "@/public/magic-wand.png"
 import spellbook from "@/public/spellbook.png"
 import Nav_Button from './Nav_Button'
 const Nav_Buttons = () => {
+    const [hover, setHover] = React.useState(false)
     const NavBtns = [
         {
             image: mini_wizard,
@@ -27,7 +28,7 @@ const Nav_Buttons = () => {
     ]
     const angleInc = 360 / NavBtns.length
     return (
-        <div className='Header_icons_container absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[140%] h-[140%] rounded-full flex items-center justify-around '>
+        <div className={`Header_icons_container absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[140%] h-[140%] rounded-full flex items-center justify-around ${hover ? "paused-animation" : ""} `}>
             {NavBtns.map((btn, index) => {
                 const angleRed = (index * angleInc * Math.PI) / 180
                 const raduis = 'calc(20vw - 1rem)'
@@ -35,6 +36,8 @@ const Nav_Buttons = () => {
                 const y = `calc(${raduis} * ${Math.sin(angleRed)})`
                 return (
                     <Nav_Button
+                        setHover={setHover}
+                        hover={hover}
                         key={index}
                         text={btn.text}
                         image={btn.image}
