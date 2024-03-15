@@ -93,6 +93,14 @@
       transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform:  rotate(-360deg);
+  }
+}
 .main-container{
   min-height: 100vh;
   width: 100vw;
@@ -127,4 +135,7 @@
 }
 .Header_icons_container{
   animation: rotate 30s linear infinite
+}
+.Header_icons_rotation{
+  animation: rotation 30s linear infinite
 }
