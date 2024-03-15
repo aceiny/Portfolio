@@ -79,7 +79,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-30px);
+    transform: translateY(-40px);
   }
   100% {
     transform: translateY(0px);
@@ -106,7 +106,7 @@
   width: 100vw;
 }
 .Header_image {
-  animation: bounce 5s linear infinite;
+  animation: bounce 4s linear infinite;
 }
 .mini-icon {
   @apply hover:opacity-60 hover:scale-90 cursor-pointer transition-all;
