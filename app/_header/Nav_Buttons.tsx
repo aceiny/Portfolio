@@ -31,7 +31,7 @@ const Nav_Buttons = () => {
         <div className={`Header_icons_container absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[140%] h-[140%] rounded-full flex items-center justify-around ${hover ? "paused-animation" : ""} `}>
             {NavBtns.map((btn, index) => {
                 const angleRed = (index * angleInc * Math.PI) / 180
-                const raduis = 'calc(20vw - 1rem)'
+                const raduis = 'calc(20vw)'
                 const x = `calc(${raduis} * ${Math.cos(angleRed)})`
                 const y = `calc(${raduis} * ${Math.sin(angleRed)})`
                 return (
