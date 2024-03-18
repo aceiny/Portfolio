@@ -6,6 +6,7 @@ type Props = {
   text: string,
   image: StaticImageData,
   index: number,
+  to : string,
   x: string,
   y: string,
 
@@ -16,11 +17,12 @@ const Nav_Button = ({
   text,
   image,
   index,
+  to,
   x,
   y,
 }: Props) => {
   return (
-    <button key={index} style={{ transform: `translate(${x}, ${y})` }} className={`absolute`}>
+    <a key={index} style={{ transform: `translate(${x}, ${y})` }} className={`absolute`} href={to} >
       <div data-text={text} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)} className={`Header_icons Header_icons_rotation ${hover ? "paused-animation" : ""}`}>
         <Image
           data-text={text}
@@ -30,7 +32,7 @@ const Nav_Button = ({
           alt=''
         />
       </div>
-    </button>
+    </a>
   )
 }
 

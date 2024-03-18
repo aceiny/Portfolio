@@ -11,19 +11,23 @@ const Nav_Buttons = () => {
     const NavBtns = [
         {
             image: mini_wizard,
-            text: "about me"
+            text: "about me",
+            to : "#about-me"
         },
         {
             image: crystal_ball,
-            text: "projects"
+            text: "projects",
+            to : "#projects"
         },
         {
             image: spellbook,
-            text: "skills"
+            text: "skills",
+            to : "#skills"
         },
         {
             image: magic_wand,
-            text: "contact me"
+            text: "contact me",
+            to : "#contact-me"
         },
     ]
     const angleInc = 360 / NavBtns.length
@@ -42,6 +46,7 @@ const Nav_Buttons = () => {
                         text={btn.text}
                         image={btn.image}
                         index={index}
+                        to={btn.to}
                         x={x}
                         y={y}
                     />)

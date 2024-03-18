@@ -82,6 +82,10 @@
     @apply bg-background text-foreground;
   }
 }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 @keyframes bounce {
   0% {
     transform: translateY(0px);
