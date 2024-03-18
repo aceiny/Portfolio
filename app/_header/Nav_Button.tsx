@@ -1,5 +1,7 @@
-import Image, { StaticImageData } from 'next/image'
-import React from 'react'
+"use client"
+import Image, { StaticImageData } from 'next/image' 
+import React, { useEffect } from 'react'
+import { getRandomColor } from '../_componants/colorFonc'
 type Props = {
   setHover: React.Dispatch<React.SetStateAction<boolean>>,
   hover: boolean,
@@ -21,9 +23,13 @@ const Nav_Button = ({
   x,
   y,
 }: Props) => {
+  const [color , setColor ] = React.useState<string>('')
+  useEffect(() => {
+    setColor(getRandomColor())
+  }, [])
   return (
-    <a key={index} style={{ transform: `translate(${x}, ${y})` }} className={`absolute`} href={to} >
-      <div data-text={text} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)} className={`Header_icons Header_icons_rotation ${hover ? "paused-animation" : ""}`}>
+    <a key={index} style={{ transform: `translate(${x}, ${y})` }} className={`absolute `} href={to} >
+      <div data-text={text} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)} style={{backgroundColor : color }} className={`Header_icons HeaderNav p-1 Header_icons_rotation ${hover ? "paused-animation" : ""}`}>
         <Image
           data-text={text}
           className='mini-icon '

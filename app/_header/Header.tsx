@@ -5,11 +5,11 @@ import Nav_Buttons from './Nav_Buttons'
 const Header = () => {
 
     return (
-        <div className='section h-screen w-full overflow-hidden flex items-center justify-center'>
+        <div className='section bg-purple-600 h-screen w-full overflow-hidden flex items-center justify-center'>
             <div className=' relative'>
                 <Image
                     src={wizard}
-                    className='Header_image'
+                    className='Header_image bg-cyan-400 WizardHeader'
                     alt="Picture of the author"
                 />
                 <Nav_Buttons/>

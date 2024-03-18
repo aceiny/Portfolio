@@ -196,3 +196,9 @@ html {
     border-right: 100px solid transparent;
     border-bottom: 200px solid rgba(254, 240, 138, 0.54);
 }
+.WizardHeader {
+  border-radius: 50% 50% 48% 52% / 70% 72% 28% 30% ;
+}
+.HeaderNav {
+  border-radius: 16% 84% 62% 38% / 25% 24% 76% 75% ;
+}
