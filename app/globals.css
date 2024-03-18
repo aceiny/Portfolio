@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Mask";
+  src: url('../public/fonts/the-mask/IpkissZF.ttf');
+}
+@font-face {
+  font-family: "Jenthill";
+  src: url("../public/fonts/jenthill/Jenthill\ DEMO.ttf");
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -139,4 +147,17 @@
 }
 .paused-animation {
   animation-play-state: paused;
+}
+.AboutMeText{
+  font-family: 'Mask', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+.AboutMeTitle{
+  font-family: 'Jenthill', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  transform: rotate(-3deg);
+  text-shadow: 2px 2px 4px #000;
 }
