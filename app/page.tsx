@@ -6,7 +6,7 @@ import Header from "./_header/Header";
 import AboutMe from "./_about_me/AboutMe";
 export default function Home() {
   return (
-    <div className="main-container overflow-x-hidden">
+    <div className="main-container container_wrapper overflow-x-hidden">
       <Header/>
       <AboutMe/>
     </div>

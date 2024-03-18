@@ -155,6 +155,7 @@ html {
 .AboutMeText{
   font-family: 'Mask', sans-serif;
   font-size: 5rem;
+  font-weight: 700;
   color: #fff;
   text-shadow: 2px 2px 4px #000;
 }
@@ -164,4 +165,34 @@ html {
   color: #fff;
   transform: rotate(-3deg);
   text-shadow: 2px 2px 4px #000;
+}
+.container_wrapper {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.section {
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+}
+
+.container_wrapper::-webkit-scrollbar {
+  width: 0.5em;
+}
+.container_wrapper::-webkit-scrollbar-track {
+  background-color: white;
+}
+.container_wrapper::-webkit-scrollbar-thumb {
+  background-color: #235af0;
+  outline: none;
+
+}
+.LampLight {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgba(254, 240, 138, 0.54);
 }

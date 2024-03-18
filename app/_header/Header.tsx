@@ -5,7 +5,7 @@ import Nav_Buttons from './Nav_Buttons'
 const Header = () => {
 
     return (
-        <div className=' h-screen w-full overflow-hidden flex items-center justify-center'>
+        <div className='section h-screen w-full overflow-hidden flex items-center justify-center'>
             <div className=' relative'>
                 <Image
                     src={wizard}

@@ -4,7 +4,7 @@ import lamp from "../../public/Lamp.svg"
 import Image from 'next/image'
 const AboutMe = () => {
   return (
-    <div id='about-me' className=' text-black h-screen flex gap-5  w-full bg-red-50 '>
+    <div id='about-me' className='section bg-purple-600 text-black h-screen flex gap-5  w-full'>
       <div className='flex flex-col w-[40vw]  items-center origin-top h-fit '>
         <Image
           className=' cursor-pointer'
@@ -16,7 +16,7 @@ const AboutMe = () => {
           alt='laptop'
         />
       </div>
-      <div className=' bg-red-200 flex flex-col justify-center flex-1 px-[5vw]'>
+      <div className=' flex flex-col bg-cyan-400 justify-center flex-1 px-[5vw]'>
         <p className='AboutMeTitle'>
         👋 hi im yacine
         </p>
