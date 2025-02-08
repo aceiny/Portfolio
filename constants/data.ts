@@ -198,13 +198,13 @@ export const featuredProjects = [
     tech: ["React Native" ,"Nest.js", "Postgresql", "Redis" , "Docker" ,],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_slkt9x5jiQnETHgWqeQPL6gQ68s556mjg&s",
   },
-  {
+  /*{
     title: "Enssea website",
     slug: "enssea-website",
     description: "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
     tech: ["React Native", "Firebase", "TensorFlow"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8M2YD9R6SOMf2vD_HyyexT5dgMm3U6LmL3Q&s",
-  },
+  },*/
 ];
 // end of projects data
 
@@ -261,37 +261,6 @@ export const projects = [
     nextProject: {
       slug: "survision",
       title: "survision",
-    },
-  },
-  {
-    slug: "survision",
-    title: "survision",
-    description: "Network monitoring system",
-    longDescription:
-      "A comprehensive security dashboard for real-time network monitoring and threat detection. Features advanced analytics and automated response capabilities.",
-    tech: ["Python", "FastAPI", "Docker", "Redis", "PostgreSQL"],
-    image: "/placeholder.svg",
-    date: "February 2024",
-    link: "#",
-    github: "#",
-    features: [
-      "Real-time network monitoring",
-      "Threat detection and alerts",
-      "Automated response system",
-      "Performance analytics",
-      "Custom rule creation",
-      "Detailed logging and reporting",
-    ],
-    challenges: [
-      "Processing large volumes of network data in real-time",
-      "Implementing accurate threat detection algorithms",
-      "Building a scalable architecture",
-      "Creating an intuitive user interface",
-    ],
-    screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    nextProject: {
-      slug: "mobile-fitness-app",
-      title: "Mobile Fitness App",
     },
   },
   // Add more projects as needed
