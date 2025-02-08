@@ -1,15 +1,16 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { cvUrl, navigation, personalInfo, socialLinks } from "@/constants/data";
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
+import { cvUrl, navigation, personalInfo, socialLinks } from "@/constants/data"
+
 
 export function Sidebar() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <motion.div
@@ -20,17 +21,8 @@ export function Sidebar() {
     >
       <div className="space-y-8">
         {/* Profile */}
-        <motion.div
-          className="flex items-center gap-4"
-          whileHover={{ scale: 1.02 }}
-        >
-          <Image
-            src={personalInfo.avatar}
-            alt="Profile"
-            width={60}
-            height={60}
-            className="rounded-full"
-          />
+        <motion.div className="flex items-center gap-4" whileHover={{ scale: 1.02 }}>
+          <Image src={personalInfo.avatar } alt="Profile" width={60} height={60} className="rounded-full" />
           <div>
             <h1 className="text-2xl font-mono">{personalInfo.name}.</h1>
             <p className="text-gray-400">{personalInfo.role}</p>
@@ -40,26 +32,20 @@ export function Sidebar() {
         {/* Navigation */}
         <nav className="space-y-2">
           {navigation.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href
             return (
-              <motion.div
-                key={item.name}
-                whileHover={{ x: 4 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.div key={item.name} whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href={item.href}
                   className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
-                    isActive
-                      ? "bg-gray-800 text-white"
-                      : "text-gray-400 hover:text-white hover:bg-gray-800/50"
+                    isActive ? "bg-gray-800 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800/50"
                   }`}
                 >
                   <item.icon className="w-5 h-5" />
                   {item.name}
                 </Link>
               </motion.div>
-            );
+            )
           })}
         </nav>
 
@@ -70,17 +56,11 @@ export function Sidebar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <motion.div
-            className="bg-gray-900/50 p-4 rounded-xl"
-            whileHover={{ scale: 1.02 }}
-          >
+          <motion.div className="bg-gray-900/50 p-4 rounded-xl" whileHover={{ scale: 1.02 }}>
             <div className="text-2xl font-bold">2000+</div>
             <div className="text-sm text-gray-400">Github Commits</div>
           </motion.div>
-          <motion.div
-            className="bg-gray-900/50 p-4 rounded-xl"
-            whileHover={{ scale: 1.02 }}
-          >
+          <motion.div className="bg-gray-900/50 p-4 rounded-xl" whileHover={{ scale: 1.02 }}>
             <div className="text-2xl font-bold">17+</div>
             <div className="text-sm text-gray-400">Day Streak</div>
           </motion.div>
@@ -111,11 +91,11 @@ export function Sidebar() {
 
         {/* Download CV */}
         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-          <Button
-            className="w-full justify-start gap-2 bg-white hover:bg-gray-100 text-black"
-            asChild
-          >
-            <Link target="_blank" rel="noopener noreferrer" href={cvUrl}>
+          <Button className="w-full justify-start gap-2 bg-white hover:bg-gray-100 text-black" asChild>
+            <Link
+              target="_blank"
+  rel="noopener noreferrer"
+            href={cvUrl}>
               <Download className="w-4 h-4" />
               Download CV
             </Link>
@@ -129,12 +109,10 @@ export function Sidebar() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <p>
-            © {personalInfo.year} {personalInfo.developer}. All rights
-            reserved.
-          </p>
+          <p>© {personalInfo.year} {personalInfo.developer}. All rights reserved.</p>
         </motion.div>
       </div>
     </motion.div>
-  );
+  )
 }
+

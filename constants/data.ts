@@ -185,25 +185,25 @@ export const techStack = [
 // featured projects data
 export const featuredProjects = [
   {
-    title: "AI Chat Platform",
-    slug: "ai-chat-platform",
-    description: "Real-time chat with AI integration",
-    tech: ["Next.js", "OpenAI", "Socket.io"],
-    image: "/placeholder.svg",
+    title: "MyQcm aljazayr",
+    slug: "my-qcm-aljazayr",
+    description: "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
+    tech: ["Nest.js", "Postgresql" , "Redis" ,"OpenAI"],
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGO8s26uQFFFrsyn4s5FPUS0e8LMU_uJlmPw&s",
   },
   {
-    title: "Security Dashboard",
-    slug: "security-dashboard",
-    description: "Network monitoring system",
-    tech: ["Python", "FastAPI", "Docker"],
-    image: "/placeholder.svg",
+    title: "Survision",
+    slug: "survision",
+    description: "Survision is a data collection platform",
+    tech: ["React Native" ,"Nest.js", "Postgresql", "Redis" , "Docker" ,],
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_slkt9x5jiQnETHgWqeQPL6gQ68s556mjg&s",
   },
   {
-    title: "Mobile Fitness App",
-    slug: "mobile-fitness-app",
-    description: "Cross-platform fitness tracking",
+    title: "Enssea website",
+    slug: "enssea-website",
+    description: "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
     tech: ["React Native", "Firebase", "TensorFlow"],
-    image: "/placeholder.svg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8M2YD9R6SOMf2vD_HyyexT5dgMm3U6LmL3Q&s",
   },
 ];
 // end of projects data
@@ -225,26 +225,27 @@ export const currentTrack = {
 
 export const projects = [
   {
-    slug: "ai-chat-platform",
-    title: "AI Chat Platform",
-    description: "Real-time chat with AI integration",
+    title: "MyQcm aljazayr",
+    slug: "my-qcm-aljazayr",
+    description: "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
+    tech: ["Nest.js", "Postgresql" , "Redis" ,"OpenAI"],  
     longDescription:
-      "A real-time chat application with AI integration for automated responses and content moderation. The platform uses advanced natural language processing to provide intelligent responses and maintain conversation context.",
-    tech: ["Next.js", "OpenAI", "Socket.io", "TypeScript", "TailwindCSS"],
-    image: "/placeholder.svg",
-    date: "March 2024",
-    link: "#",
-    github: "#",
+      "MyQCM is a platform designed to manage multiple-choice questions (MCQs) for educational institutions and automate payment calculations for freelancers. It helps maintain a structured entry of MCQs and tracks user progress and performance analytics.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGO8s26uQFFFrsyn4s5FPUS0e8LMU_uJlmPw&s",
+    date: "Aug 2024",
+    link: "https://myqcmdz.com/",
+    github: "https://github.com/aceiny/my_qcm",
     features: [
-      "Real-time messaging with WebSocket integration",
-      "AI-powered automated responses",
-      "Content moderation using machine learning",
-      "Multi-language support",
-      "User authentication and authorization",
-      "Message history and search functionality",
+      "MCQ Entry and Management:",
+      "Automated Payment Calculation",
+      "User Progress Tracking",
+      "Performance Analysis",
+      "Multi-Level Course Hierarchy",
+      "Real-Time Reporting",
+      "Scalable Infrastructure"
     ],
     challenges: [
-      "Implementing efficient real-time communication",
+      "Implementing efficient app",
       "Optimizing AI response time",
       "Handling high concurrent user loads",
       "Ensuring data privacy and security",
@@ -252,19 +253,19 @@ export const projects = [
     screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
     testimonial: {
       quote:
-        "The AI chat platform has revolutionized our customer support system. Response times are down 70% and customer satisfaction is up 45%.",
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
+        "This platform has helped me alot in my medical studies",
+      name: "Mohamed",
+      role: "CEO, TechCorp",
       avatar: "/placeholder.svg",
     },
     nextProject: {
-      slug: "security-dashboard",
-      title: "Security Dashboard",
+      slug: "survision",
+      title: "survision",
     },
   },
   {
-    slug: "security-dashboard",
-    title: "Security Dashboard",
+    slug: "survision",
+    title: "survision",
     description: "Network monitoring system",
     longDescription:
       "A comprehensive security dashboard for real-time network monitoring and threat detection. Features advanced analytics and automated response capabilities.",
