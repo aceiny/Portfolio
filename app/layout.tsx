@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 import type React from "react"; // Added import for React
 import { personalInfo, portfolioInfo } from "@/constants/data";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
@@ -18,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
+      <body className={` bg-black text-white`}>
         <div className="flex min-h-screen">
           <Sidebar />
           <main className="flex-1 ml-[400px]">{children}</main>
