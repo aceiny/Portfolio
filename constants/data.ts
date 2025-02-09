@@ -15,7 +15,7 @@ export const portfolioInfo = {
   portfolioUrl: "https://aceinyportfolio.vercel.app",
   portfolioDescription: "Portfolio showcasing my work in software development",
   portfolioHomeHeaderDescription:
-    "Building innovative web applications and solving complex problems through elegant code.",
+    "Building innovative web and mobile applications and solving complex problems through elegant code.",
   getInTouch: "https://www.linkedin.com/in/yacine-zeraibi-1b8307300",
 };
 // end of portfolio data
