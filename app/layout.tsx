@@ -7,6 +7,9 @@ import { personalInfo, portfolioInfo } from "@/constants/data";
 export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
   description: portfolioInfo.portfolioDescription,
+  icons: {
+    icon: '/favicon.ico', // Path to your favicon
+  },
 };
 export default function RootLayout({
   children,
@@ -15,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.ico" sizes="any" />
+      </head>
       <body className={` bg-black text-white`}>
         <div className="flex min-h-screen">
           <Sidebar />

@@ -1,7 +1,7 @@
 "use client";
 
-import { techStack } from "@/constants/tachStack";
 import { motion } from "framer-motion";
+import { techStack } from "@/constants/tachStack";
 
 const container = {
   hidden: { opacity: 0 },
@@ -38,13 +38,14 @@ export function TechStack() {
       <motion.h2 className="text-2xl font-mono" variants={item}>
         Technical Expertise
       </motion.h2>
-      <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {techStack.map((category) => (
           <motion.div
             key={category.title}
             variants={item}
             whileHover={{ scale: 1.02 }}
-            className={`rounded-xl p-6 bg-gradient-to-br ${category.color} backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-${category.color.split("-")[1]}/10`}
+            style={{backgroundColor : category.color}}
+            className={`rounded-xl p-6  backdrop-blur-sm transition-all duration-300 hover:shadow-lg`}
           >
             <motion.div
               className="flex items-center gap-2 mb-4"

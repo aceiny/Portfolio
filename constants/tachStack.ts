@@ -22,7 +22,7 @@ export const techStack = [
         "Java",
         "Bash",
       ],
-      color: "from-blue-500/20 to-blue-600/20",
+      color: "#4B5563",
     },
     {
       title: "Frontend",
@@ -36,13 +36,13 @@ export const techStack = [
         "Zustand",
         "React Query",
       ],
-      color: "from-purple-500/20 to-purple-600/20",
+      color: "#a855f733",
     },
     {
       title: "Backend",
       icon: Server,
       items: ["Express.js", "Nest.js", "FastAPI", "Django", "Gin", "Socket.io"],
-      color: "from-green-500/20 to-green-600/20",
+      color: "#22c55e33",
     },
     {
       title: "Database",
@@ -57,7 +57,7 @@ export const techStack = [
         "NoSQL",
         "Redis",
       ],
-      color: "from-yellow-500/20 to-yellow-600/20",
+      color: "#eab30833",
     },
     {
       title: "DevOps & Tools",
@@ -71,7 +71,7 @@ export const techStack = [
         "Azure",
         "VS Code",
       ],
-      color: "from-red-500/20 to-red-600/20",
+      color: "#ef444433",
     },
     {
       title: "AI & ML",
@@ -84,7 +84,7 @@ export const techStack = [
         "PyTorch",
         "Scikit-learn",
       ],
-      color: "from-pink-500/20 to-pink-600/20",
+      color: "#ec489933",
     },
     {
       title: "Cybersecurity",
@@ -95,7 +95,7 @@ export const techStack = [
         "Security Auditing",
         "Cryptography",
       ],
-      color: "from-emerald-500/20 to-emerald-600/20",
+      color: "#10b98133",
     },
     {
       title: "Other Skills",
@@ -109,6 +109,6 @@ export const techStack = [
         "Figma",
         "Technical Writing",
       ],
-      color: "from-orange-500/20 to-orange-600/20",
+      color: "#f9731633",
     },
   ];
