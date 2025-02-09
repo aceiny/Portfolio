@@ -38,7 +38,7 @@ import enssea_screenshot_3 from "@/public/projects/enssea/enssea_screenshot3.svg
 
 // start of portfolio data
 export const portfolioInfo = {
-  portfolioUrl: "http://localhost:3000",
+  portfolioUrl: "https://aceinyportfolio.vercel.app",
   portfolioDescription: "Portfolio showcasing my work in software development",
   portfolioHomeHeaderDescription:
     "Building innovative web applications and solving complex problems through elegant code.",
