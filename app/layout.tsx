@@ -3,6 +3,7 @@ import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 import type React from "react"; // Added import for React
 import { personalInfo, portfolioInfo } from "@/constants/data";
+import { MusicPlayer } from "@/components/music-player";
 
 export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
@@ -32,3 +33,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+// music player if you want to add : 
+// <MusicPlayer />

@@ -20,24 +20,36 @@ import { currentTrack } from "@/constants/data";
 export function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [position, setPosition] = useState({ x: 20, y: 20 }); // Start in top-left corner
+  const [position, setPosition] = useState({ x: 0, y: 100 });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-
-    // Set position to bottom right after mount
-    const initialX =
-      typeof window !== "undefined" ? window.innerWidth - 340 : 20;
-    const initialY =
-      typeof window !== "undefined" ? window.innerHeight - 100 : 20;
-
+    
+    // Set initial position to bottom left
+    const initialX = 20; // Small margin from left
+    const initialY = typeof window !== "undefined" ? window.innerHeight - 180 : 20;
+    
     setPosition({ x: initialX, y: initialY });
+    
+    // Update position on window resize
+    const handleResize = () => {
+      setPosition(prev => ({
+        x: prev.x,
+        y: window.innerHeight - 100,
+      }));
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (!mounted) {
-    return null; // Don't render anything until after mount
-  }
+  if (!mounted) return null;
+
+  const handleVolumeChange = (e: React.PointerEvent<HTMLDivElement>): void => {
+    // Prevent drag event propagation when adjusting volume
+    e.stopPropagation();
+  };
 
   return (
     <motion.div
@@ -82,7 +94,7 @@ export function MusicPlayer() {
               alt="Album art"
               width={48}
               height={48}
-              className="rounded-lg"
+              className="rounded-full object-cover" // Changed to rounded-full
             />
           </motion.div>
           <div className="flex-1 min-w-0">
@@ -127,7 +139,7 @@ export function MusicPlayer() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2" onPointerDown={handleVolumeChange}>
                   <Button variant="ghost" size="icon" className="h-8 w-8">
                     <Volume2 className="h-4 w-4" />
                   </Button>
@@ -136,6 +148,7 @@ export function MusicPlayer() {
                     max={100}
                     step={1}
                     className="w-20"
+                    dir="ltr" // Ensure left-to-right direction
                   />
                 </div>
                 <div className="flex items-center gap-2">

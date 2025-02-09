@@ -1,12 +1,10 @@
-"use client";
-
+"use client";;
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { TechStack } from "@/components/tech-stack";
-import { MusicPlayer } from "@/components/music-player";
 import { portfolioInfo } from "@/constants/data";
 import { featuredProjects } from "@/constants/projects";
 
@@ -204,8 +202,6 @@ export default function HomePage() {
           </motion.div>
         </motion.section>
       </motion.div>
-
-      <MusicPlayer />
     </div>
   );
 }
