@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { TechStack } from "@/components/tech-stack";
 import { MusicPlayer } from "@/components/music-player";
-import { featuredProjects, portfolioInfo } from "@/constants/data";
+import { portfolioInfo } from "@/constants/data";
+import { featuredProjects } from "@/constants/projects";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },

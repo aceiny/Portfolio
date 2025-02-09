@@ -1,6 +1,6 @@
 "use client";
 
-import { techStack } from "@/constants/data";
+import { techStack } from "@/constants/tachStack";
 import { motion } from "framer-motion";
 
 const container = {
@@ -38,7 +38,7 @@ export function TechStack() {
       <motion.h2 className="text-2xl font-mono" variants={item}>
         Technical Expertise
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
         {techStack.map((category) => (
           <motion.div
             key={category.title}

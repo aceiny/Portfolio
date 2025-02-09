@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronLeft, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { projects } from "@/constants/data";
+import { projects } from "@/constants/projects";
 
 const container = {
   hidden: { opacity: 0 },

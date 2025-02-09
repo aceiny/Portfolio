@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { projects } from "@/constants/data";
+import { projects } from "@/constants/projects";
 
 const container = {
   hidden: { opacity: 0 },

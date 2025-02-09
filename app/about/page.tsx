@@ -5,7 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronLeft, Mail, Github, Linkedin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cvUrl, personalInfo, quickStats, socialLinks } from "@/constants/data";
+import { cvUrl, personalInfo, socialLinks } from "@/constants/data";
+import { quickStats } from "@/constants/about";
 
 const container = {
   hidden: { opacity: 0 },
