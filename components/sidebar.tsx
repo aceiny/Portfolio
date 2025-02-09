@@ -119,14 +119,14 @@ export function Sidebar() {
                   className="bg-gray-900/50 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-2xl font-bold">2000+</div>
+                  <div className="text-2xl font-bold">{personalInfo.githubStats.commits}</div>
                   <div className="text-sm text-gray-400">Github Commits</div>
                 </motion.div>
                 <motion.div
                   className="bg-gray-900/50 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-2xl font-bold">17+</div>
+                  <div className="text-2xl font-bold">{personalInfo.githubStats.streak}</div>
                   <div className="text-sm text-gray-400">Day Streak</div>
                 </motion.div>
               </motion.div>
