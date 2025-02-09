@@ -26,7 +26,6 @@ const item = {
   },
 };
 
-
 export default function CompetitionsPage() {
   return (
     <motion.div
@@ -41,13 +40,20 @@ export default function CompetitionsPage() {
         </motion.h1>
 
         <motion.div className="grid gap-6" variants={container}>
-          {competitions.map((competition, index) => (
+          {competitions.map((competition) => (
             <motion.div
               key={competition.title}
               variants={item}
-              whileHover={{ scale: 1.02 }}
-              style={{ backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[0]}, ${competition.color.split(',')[0]})`,            }}
-              className={`rounded-xl overflow-hidden`}
+              initial={{
+                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[0]}, ${competition.color.split(',')[1]})`,
+                opacity: 1,
+              }}
+              whileHover={{
+                scale: 1.02,
+                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[1]}, ${competition.color.split(',')[0]})`,
+              }}
+              transition={{ duration: 0.3 }}
+              className="rounded-xl overflow-hidden transition-all duration-300"
             >
               <motion.div
                 className="p-6 backdrop-blur-sm"
