@@ -28,7 +28,7 @@ const item = {
 export default function EducationPage() {
   return (
     <motion.div
-      className="min-h-screen p-8"
+      className="min-h-screen p-1 md:p-8"
       initial="hidden"
       animate="visible"
       variants={container}

@@ -34,7 +34,7 @@ export default function ProjectPage() {
   const project = projects.find((p) => p.slug === params.slug) || projects[0];
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-1 md:p-8">
       <motion.div
         className="max-w-4xl mx-auto space-y-8"
         initial="hidden"

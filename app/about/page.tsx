@@ -32,7 +32,7 @@ const item = {
 export default function AboutPage() {
   return (
     <motion.div
-      className="min-h-screen bg-black text-white p-6"
+      className="min-h-screen bg-black text-white p-1 md:p-6"
       initial="hidden"
       animate="visible"
       variants={container}

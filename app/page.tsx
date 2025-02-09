@@ -47,9 +47,9 @@ const scaleUp = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-1 md:p-8">
       <motion.div
-        className="max-w-6xl space-y-24"
+        className="space-y-24"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -59,7 +59,7 @@ export default function HomePage() {
           className="min-h-[80vh] flex flex-col justify-center"
           variants={fadeInUp}
         >
-          <div className="space-y-8 max-w-3xl">
+          <div className="space-y-8 ">
             <motion.h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Crafting Digital{" "}
               <motion.span
