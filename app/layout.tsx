@@ -21,10 +21,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.ico" sizes="any" />
       </head>
-      <body className={` bg-black text-white`}>
+      <body className="bg-black text-white">
         <div className="flex min-h-screen">
           <Sidebar />
-          <main className="flex-1 ml-[400px]">{children}</main>
+          <main className="flex-1 ml-0 lg:ml-[400px] p-4 lg:p-8">
+            {children}
+          </main>
         </div>
       </body>
     </html>
