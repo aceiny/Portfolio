@@ -6,7 +6,7 @@ export const competitions = [
       location: "Béjaïa",
       achievement: "First Place",
       description: "Created an innovative solution addressing a space challenge.",
-      color: "from-blue-500/20 to-blue-600/20",
+      color: "#3b82f633,#2563eb33",
       link: "#",
     },
     {
@@ -17,7 +17,7 @@ export const competitions = [
       achievement: "Second Place",
       description:
         "Secured 2nd place in an intense and competitive cybersecurity challenge.",
-      color: "from-purple-500/20 to-purple-600/20",
+      color: "#a855f733,#9333ea33",
       link: "#",
     },
     {
@@ -28,7 +28,7 @@ export const competitions = [
       achievement: "First Place",
       description:
         "First-place winning team among 18 teams for developing an innovative solution.",
-      color: "from-green-500/20 to-green-600/20",
+      color: "#22c55e33,#16a34a33",
       link: "#",
     },
     {
@@ -39,7 +39,7 @@ export const competitions = [
       achievement: "6th Place",
       description:
         "Ranked 6th for data analysis and visualization in a competitive setting.",
-      color: "from-yellow-500/20 to-yellow-600/20",
+      color: "#eab30833,#ca8a0433",
       link: "#",
     },
     {
@@ -50,7 +50,7 @@ export const competitions = [
       achievement: "Participant",
       description:
         "Participated in developing a technical solution in collaboration with a dynamic team.",
-      color: "from-red-500/20 to-red-600/20",
+      color: "#ef444433,#dc262633",
       link: "#",
     },
   ];

@@ -46,7 +46,8 @@ export default function CompetitionsPage() {
               key={competition.title}
               variants={item}
               whileHover={{ scale: 1.02 }}
-              className={`rounded-xl overflow-hidden bg-gradient-to-br ${competition.color}`}
+              style={{ backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[0]}, ${competition.color.split(',')[0]})`,            }}
+              className={`rounded-xl overflow-hidden`}
             >
               <motion.div
                 className="p-6 backdrop-blur-sm"

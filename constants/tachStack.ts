@@ -22,7 +22,7 @@ export const techStack = [
         "Java",
         "Bash",
       ],
-      color: "#4B5563",
+      color: "#4B5563,#16a34a33",
     },
     {
       title: "Frontend",
@@ -36,7 +36,7 @@ export const techStack = [
         "Zustand",
         "React Query",
       ],
-      color: "#a855f733",
+      color: "#a855f733,#ca8a0433",
     },
     {
       title: "Backend",
@@ -57,7 +57,7 @@ export const techStack = [
         "NoSQL",
         "Redis",
       ],
-      color: "#eab30833",
+      color: "#eab30833,#ca8a0433",
     },
     {
       title: "DevOps & Tools",
@@ -71,7 +71,7 @@ export const techStack = [
         "Azure",
         "VS Code",
       ],
-      color: "#ef444433",
+      color: "#ef444433,#dc262633",
     },
     {
       title: "AI & ML",
@@ -84,7 +84,7 @@ export const techStack = [
         "PyTorch",
         "Scikit-learn",
       ],
-      color: "#ec489933",
+      color: "#ec489933,#db277733",
     },
     {
       title: "Cybersecurity",
@@ -95,7 +95,7 @@ export const techStack = [
         "Security Auditing",
         "Cryptography",
       ],
-      color: "#10b98133",
+      color: "#10b98133,#05966933",
     },
     {
       title: "Other Skills",
@@ -109,6 +109,6 @@ export const techStack = [
         "Figma",
         "Technical Writing",
       ],
-      color: "#f9731633",
+      color: "#f9731633,ea580c33",
     },
   ];

@@ -44,7 +44,7 @@ export function TechStack() {
             key={category.title}
             variants={item}
             whileHover={{ scale: 1.02 }}
-            style={{backgroundColor : category.color}}
+            style={{ backgroundImage: `linear-gradient(to bottom right, ${category.color.split(',')[0]}, ${category.color.split(',')[0]})`,            }}
             className={`rounded-xl p-6  backdrop-blur-sm transition-all duration-300 hover:shadow-lg`}
           >
             <motion.div
