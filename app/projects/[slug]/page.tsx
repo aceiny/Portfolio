@@ -121,6 +121,8 @@ export default function ProjectPage() {
                 <div className="space-y-2">
                   <Button className="w-full" asChild>
                     <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={project.link}
                       className="flex items-center gap-2"
                     >
@@ -130,6 +132,8 @@ export default function ProjectPage() {
                   </Button>
                   <Button variant="secondary" className="w-full" asChild>
                     <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={project.github}
                       className="flex items-center gap-2"
                     >

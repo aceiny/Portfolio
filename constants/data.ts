@@ -22,9 +22,18 @@ import {
 import avatarImage from "../public/self.jpeg";
 import myqcm_avatar from "@/public/projects/myqcm/myqcm_avatar.svg";
 import myqcm_screenshot_1 from "@/public/projects/myqcm/myqcm_screenshot1.svg";
-import survision_avatar from "@/public/projects/survision/survision._avatar.svg"
-
-
+import myqcm_screenshot_2 from "@/public/projects/myqcm/myqcm_screenshot2.svg";
+import myqcm_screenshot_3 from "@/public/projects/myqcm/myqcm_screenshot3.svg";
+import myqcm_testi from "@/public/projects/myqcm/myqcm_testi.jpeg";
+import survision_avatar from "@/public/projects/survision/survision._avatar.svg";
+import survision_screenshot_1 from "@/public/projects/survision/survision_screenshot1.svg";
+import survision_screenshot_2 from "@/public/projects/survision/survision_screenshot2.svg";
+import survision_screenshot_3 from "@/public/projects/survision/survision_screenshot3.svg";
+import survision_testi from "@/public/projects/survision/survision_testi.jpeg";
+import enssea_avatar from "@/public/projects/enssea/enssea_avatar.svg";
+import enssea_screenshot_1 from "@/public/projects/enssea/enssea_screenshot1.svg";
+import enssea_screenshot_2 from "@/public/projects/enssea/enssea_screenshot2.svg";
+import enssea_screenshot_3 from "@/public/projects/enssea/enssea_screenshot3.svg";
 // imports end
 
 // start of portfolio data
@@ -49,9 +58,11 @@ export const personalInfo = {
     streak: "17+",
   },
   aboutMe: `
-  Full-Stack Developer skilled in Java, Python, JavaScript, and frameworks like React, Next.js, Express.js,
-  Nest.js, and FastAPI. Proficient in database management, cloud services, and tools such as Docker, Redis,
-  and GitHub Actions.
+  Full-Stack Developer skilled in Java, Python, JavaScript, and frameworks like React, Next.js, Express.js, Nest.js,
+  and FastAPI. Proficient in database management, cloud services, and tools such as Docker, Redis, and GitHub
+  Actions. Adept at building scalable, high-performance applications with a results-driven mindset, strong teamwork
+  skills, and a passion for continuous learning. Currently pursuing a degree in Computer Science, eager to tackle
+  technical challenges and deliver innovative solutions.
   `,
 };
 
@@ -197,24 +208,27 @@ export const featuredProjects = [
   {
     title: "MyQcm aljazayr",
     slug: "my-qcm-aljazayr",
-    description: "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
-    tech: ["Nest.js", "Postgresql" , "Redis" ,"OpenAI"],
+    description:
+      "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
+    tech: ["Nest.js", "Typescript", "Postgresql", "Redis", "OpenAI"],
     image: myqcm_avatar,
   },
   {
     title: "Survision",
     slug: "survision",
-    description: "Survision is a data collection platform",
-    tech: ["React Native" ,"Nest.js", "Postgresql", "Redis" , "Docker" ,],
+    description:
+      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
+    tech: ["React Native", "Nest.js", "Postgresql", "Redis", "Docker"],
     image: survision_avatar,
   },
-  /*{
+  {
     title: "Enssea website",
     slug: "enssea-website",
-    description: "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
-    tech: ["React Native", "Firebase", "TensorFlow"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8M2YD9R6SOMf2vD_HyyexT5dgMm3U6LmL3Q&s",
-  },*/
+    description:
+      "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
+    tech: ["Next.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
+    image: enssea_avatar,
+  },
 ];
 // end of projects data
 
@@ -237,10 +251,16 @@ export const projects = [
   {
     title: "MyQcm aljazayr",
     slug: "my-qcm-aljazayr",
-    description: "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
-    tech: ["Nest.js", "Postgresql" , "Redis" ,"OpenAI"],  
-    longDescription:
-      "MyQCM is a platform designed to manage multiple-choice questions (MCQs) for educational institutions and automate payment calculations for freelancers. It helps maintain a structured entry of MCQs and tracks user progress and performance analytics.",
+    description:
+      "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
+    tech: ["Nest.js", "Typescript", "Postgresql", "Redis", "OpenAI"],
+    longDescription: `
+    Rebuilt the backend with NestJS, TypeScript, and PostgreSQL, redesigning the database schema for improved
+    performance and maintainability.
+    Migrated existing data to the new schema while ensuring data integrity.
+    Collaborated with a team of three on architecture, API integration, and project optimization.
+    The project won 2nd place at Eductek, a startup-focused conference.
+    `,
     image: myqcm_avatar,
     date: "Aug 2024",
     link: "https://myqcmdz.com/",
@@ -252,7 +272,7 @@ export const projects = [
       "Performance Analysis",
       "Multi-Level Course Hierarchy",
       "Real-Time Reporting",
-      "Scalable Infrastructure"
+      "Scalable Infrastructure",
     ],
     challenges: [
       "Implementing efficient app",
@@ -260,13 +280,13 @@ export const projects = [
       "Handling high concurrent user loads",
       "Ensuring data privacy and security",
     ],
-    screenshots: [myqcm_screenshot_1, "/placeholder.svg", "/placeholder.svg"],
+    screenshots: [myqcm_screenshot_1, myqcm_screenshot_2, myqcm_screenshot_3],
     testimonial: {
       quote:
-        "This platform has helped me alot in my medical studies",
-      name: "Mohamed",
-      role: "CEO, TechCorp",
-      avatar: "/placeholder.svg",
+        "Collaborating with aceiny on the MyQCM Aljazayer project was a transformative experience. His expertise in Nest.js, PostgreSQL, Redis, and OpenAI was instrumental in rebuilding our backend infrastructure",
+      name: "Rayane Boucheraine",
+      role: "CTO, MyQcm",
+      avatar: myqcm_testi,
     },
     nextProject: {
       slug: "survision",
@@ -276,10 +296,23 @@ export const projects = [
   {
     title: "Survision ",
     slug: "survision",
-    description: "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
-    tech: ["Nest.js", "Postgresql" , "Redis" ,"OpenAI"],  
-    longDescription:
-      "Survision is an innovative market research platform founded by Abdelbasset Meghraoui, designed to revolutionize data collection and analysis for businesses in Algeria. The platform employs a network of over 450 trained data collectors nationwide to gather information through surveys and questionnaires, providing actionable insights tailored to the needs of local enterprises.",
+    description:
+      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
+    tech: [
+      "React Native",
+      "Nest.js",
+      "Typescript",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Nginx",
+    ],
+    longDescription: `
+    Developed the backend using NestJS, TypeORM, PostgreSQL, Redis, and TypeScript, alongside a mobile
+    application with React Native, integrating secure APIs and real-time features.
+    Managed deployment servers with Nginx, configured domain names, ensured server security, and optimized
+    performance.
+    `,
     image: survision_avatar,
     date: "Aug 2024",
     link: "https://survision.io",
@@ -294,7 +327,7 @@ export const projects = [
       "Payment and Transaction Management: Supports payment processing and transaction tracking for collectors.",
       "API Documentation with Swagger: Uses Swagger to document and expose the API endpoints.",
       "Email Notifications: Sends email notifications for various events, such as account verification and demo requests.",
-      "Company Profile Management: Allows companies to manage their profiles, including company size, contact information, and website details."
+      "Company Profile Management: Allows companies to manage their profiles, including company size, contact information, and website details.",
     ],
     challenges: [
       "Ensuring accurate location data and survey assignment.",
@@ -306,19 +339,70 @@ export const projects = [
       "Managing collector verification and status updates.",
       "Integrating with external services for location data and payment processing.",
       "Creating a user-friendly interface for survey creation and management.",
-      "Keeping the application up-to-date with the latest security patches and best practices."
+      "Keeping the application up-to-date with the latest security patches and best practices.",
     ],
-    screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    
+    screenshots: [
+      survision_screenshot_1,
+      survision_screenshot_2,
+      survision_screenshot_3,
+    ],
+
     testimonial: {
-        "quote": "Survision has revolutionized our market research process. The ability to target specific Wilayas and track collector activity in real-time has significantly improved the accuracy and efficiency of our surveys.",
-        "name": "Amina Benali",
-        "role": "Market Research Director, AlgTech Solutions",
-        "avatar": "/placeholder.svg"
-      },
+      quote:
+        "aceiny's commitment to excellence and innovative approach significantly enhanced our platform's performance and user experience. His contributions have been invaluable to Survision's success",
+      name: "Abdelbasset Meghraoui,",
+      role: "Founder & CEO of Survision",
+      avatar: survision_testi,
+    },
     nextProject: {
       slug: "enssea-website",
       title: "enssea website",
+    },
+  },
+
+  {
+    title: "Enssea website",
+    slug: "enssea-website",
+    description:
+      "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
+    tech: ["Nexs.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
+    longDescription: `
+    I developed a comprehensive website for the National Higher School of Statistics and Applied Economics (ENSSEA) using Next.js, TypeScript, TailwindCSS, and Shadcn, integrated it seamlessly with a Laravel backend, and managed deployment through cPanel, resulting in a dynamic, responsive, and user-friendly platform that effectively serves the needs of ENSSEA's students, faculty, and stakeholders.
+    `,
+    image: enssea_avatar,
+    date: "Jan 2025",
+    link: "https://www.test.enssea.edu.dz",
+    github: "https://github.com/aceiny/enssea",
+    features: [
+      "Dynamic Event Card Component:",
+      "Centralized API Configuration",
+      "Reusable Query Hooks",
+      "Responsive Layout with Tailwind CSS",
+      "Client-Side Routing with Next.js Router",
+      "Image Optimization with Next.js Image Component",
+      "Modular Component Design",
+    ],
+    challenges: [
+      "Optimizing data fetching for landing page",
+      "Ensuring consistent UI across devices",
+      "Managing complex data transformations",
+      "Handling potential API errors gracefully",
+      "Maintaining code readability and scalability",
+    ],
+    screenshots: [
+      enssea_screenshot_1,
+      enssea_screenshot_2,
+      enssea_screenshot_3,
+    ],
+    testimonial: {
+      quote: "No testimonial available",
+      name: "undifined",
+      role: "undifined",
+      avatar: "",
+    },
+    nextProject: {
+      slug: "myqcm",
+      title: "myqcm-aljazayr",
     },
   },
   // Add more projects as needed
