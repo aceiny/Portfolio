@@ -12,6 +12,10 @@ import enssea_avatar from "@/public/projects/enssea/enssea_avatar.svg";
 import enssea_screenshot_1 from "@/public/projects/enssea/enssea_screenshot1.svg";
 import enssea_screenshot_2 from "@/public/projects/enssea/enssea_screenshot2.svg";
 import enssea_screenshot_3 from "@/public/projects/enssea/enssea_screenshot3.svg";
+import lockSphere_screenshot_1 from "@/public/projects/locksphere/locksphere_screenshot1.png";
+import lockSphere_screenshot_2 from "@/public/projects/locksphere/locksphere_screenshot2.png";
+import lockSphere_screenshot_3 from "@/public/projects/locksphere/locksphere_screenshot3.png";
+import lockSphere_avatar from "@/public/projects/locksphere/locksphere_avatar.png";
 
 export const featuredProjects = [
     {
@@ -37,6 +41,24 @@ export const featuredProjects = [
         "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
       tech: ["Next.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
       image: enssea_avatar,
+    },
+    {
+      title: "LockSphere",
+      slug: "lock-sphere",
+      description:
+      "A robust password management solution designed to securely store and manage sensitive credentials with modern encryption technologies",
+      tech: [
+        "NestJS",
+        "Next.js", 
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "PostgreSQL",
+        "Redis",
+        "Bull Queue",
+        "Cloudinary"
+      ],
+      image: lockSphere_avatar,
     },
   ];
 
@@ -165,7 +187,7 @@ export const featuredProjects = [
       `,
       image: enssea_avatar,
       date: "Jan 2025",
-      link: "https://www.test.enssea.edu.dz",
+      link: "https://enssea.edu.dz",
       github: "https://github.com/aceiny/enssea",
       features: [
         "Dynamic Event Card Component:",
@@ -195,10 +217,68 @@ export const featuredProjects = [
         avatar: "",
       },
       nextProject: {
-        slug: "myqcm-aljazayr",
-        title: "myqcm",
+        title: "LockSphere",
+        slug: "lock-sphere",
       },
     },
+    {
+      title: "LockSphere",
+      slug: "lock-sphere",
+      description:
+        "A robust password management solution designed to securely store and manage sensitive credentials with modern encryption technologies",
+      tech: [
+        "NestJS",
+        "Next.js", 
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "PostgreSQL",
+        "Redis",
+        "Bull Queue",
+        "Cloudinary"
+      ],
+      longDescription: `
+        LockSphere is a comprehensive password management system that prioritizes security and user experience. Built with NestJS and modern encryption technologies, it provides secure credential storage while maintaining accessibility. The application features vault management, two-factor authentication, secure file handling, and real-time notifications, all wrapped in an intuitive user interface powered by Next.js and Shadcn UI components.
+      `,
+      image: lockSphere_avatar, // You'll need to provide this
+      date: "Feb 2025",
+      link: "https://lock.yxne.tech",
+      github: "https://github.com/aceiny/lock-sphere", // Update with your actual repo
+      features: [
+        "Secure Password Storage with AES-256-GCM Encryption",
+        "Two-Factor Authentication (2FA) with TOTP",
+        "Category-based Vault Management",
+        "Custom Password Generator",
+        "Secure File Upload System with Cloudinary",
+        "Real-time login history and notifications",
+        "Dark/Light Theme Support",
+        "Activity Logging and Monitoring",
+        "Data Import/Export Capabilities"
+      ],
+      challenges: [
+        "Implementing robust encryption for sensitive data",
+        "Building a secure authentication system with 2FA",
+        "Optimizing performance with Redis caching",
+        "Managing secure file uploads and storage",
+        "Creating an intuitive and responsive UI",
+        "Ensuring scalability and maintainability"
+      ],
+      screenshots: [
+        lockSphere_screenshot_1, // You'll need to provide these
+        lockSphere_screenshot_2,
+        lockSphere_screenshot_3
+      ],
+      testimonial: {
+        quote: "No testimonial available",
+        name: "undefined",
+        role: "undefined",
+        avatar: "",
+      },
+      nextProject: {
+        title: "MyQcm aljazayr",
+        slug: "my-qcm-aljazayr",
+      }
+    }
     // Add more projects as needed
   ];
   
