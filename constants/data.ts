@@ -29,7 +29,7 @@ export const personalInfo = {
   avatar: avatarImage,
   githubStats: {
     commits: "2000+",
-    streak: "43+",
+    streak: "75+",
   },
   aboutMe: `
   Full-Stack Developer skilled in Java, Python, JavaScript, and frameworks like React, Next.js, Express.js, Nest.js,
