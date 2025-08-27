@@ -3,9 +3,11 @@
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects I've worked on.
 
 ## Live Demo
+
 ```bash
 https://yxne.tech
 ```
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -34,7 +36,6 @@ This portfolio is built using Next.js and is designed to be a modern, responsive
 - **Project Pages:** Dedicated pages for each project with detailed information, screenshots, and client testimonials.
 - **Competitions & Achievements:** A dedicated page showcasing my participation and achievements in various competitions.
 - **Education:** Details about my educational background, degrees, and certifications.
-
 
 ## Technologies Used
 
@@ -128,7 +129,7 @@ This project can be deployed to various platforms, including:
 - [DigitalOcean](https://www.digitalocean.com/)
 - [Azure](https://azure.microsoft.com/)
 
-Follow the deployment instructions for your chosen platform.  Typically, this involves connecting your repository to the platform and configuring the build and deployment settings.
+Follow the deployment instructions for your chosen platform. Typically, this involves connecting your repository to the platform and configuring the build and deployment settings.
 
 ## Contributing
 

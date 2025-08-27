@@ -25,23 +25,24 @@ export function MusicPlayer() {
 
   useEffect(() => {
     setMounted(true);
-    
+
     // Set initial position to bottom left
     const initialX = 20; // Small margin from left
-    const initialY = typeof window !== "undefined" ? window.innerHeight - 180 : 20;
-    
+    const initialY =
+      typeof window !== "undefined" ? window.innerHeight - 180 : 20;
+
     setPosition({ x: initialX, y: initialY });
-    
+
     // Update position on window resize
     const handleResize = () => {
-      setPosition(prev => ({
+      setPosition((prev) => ({
         x: prev.x,
         y: window.innerHeight - 100,
       }));
     };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!mounted) return null;
@@ -139,7 +140,10 @@ export function MusicPlayer() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2" onPointerDown={handleVolumeChange}>
+                <div
+                  className="flex items-center gap-2"
+                  onPointerDown={handleVolumeChange}
+                >
                   <Button variant="ghost" size="icon" className="h-8 w-8">
                     <Volume2 className="h-4 w-4" />
                   </Button>

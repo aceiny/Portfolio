@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
   description: portfolioInfo.portfolioDescription,
   icons: {
-    icon: '/favicon.ico', // Path to your favicon
+    icon: "/favicon.ico", // Path to your favicon
   },
 };
 export default function RootLayout({
@@ -34,6 +34,5 @@ export default function RootLayout({
   );
 }
 
-
-// music player if you want to add : 
+// music player if you want to add :
 // <MusicPlayer />

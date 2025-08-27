@@ -1,12 +1,16 @@
-"use client";;
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
 import { TechStack } from "@/components/tech-stack";
 import { portfolioInfo } from "@/constants/data";
 import { featuredProjects } from "@/constants/projects";
+import { useEffect, useState } from "react";
+import { fetchMediumBlogs } from "@/api/blogs.api";
+import { MediumBlogPost } from "@/types/medium.types";
+import DOMPurify from "dompurify";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -43,7 +47,27 @@ const scaleUp = {
   },
 };
 
+const cleanDescription = (htmlString: string) => {
+  // Use DOMPurify to clean HTML and then extract text content
+  const cleanHtml = DOMPurify.sanitize(htmlString, { ALLOWED_TAGS: [] });
+  return cleanHtml.trim();
+};
+
 export default function HomePage() {
+  const [mediumBlogs, setMediumBlogs] = useState<MediumBlogPost[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const medium = await fetchMediumBlogs();
+        setMediumBlogs(medium.items);
+      } catch (error) {
+        console.error("Failed to fetch Medium blogs:", error);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <div className="min-h-screen p-1 md:p-8">
       <motion.div
@@ -160,6 +184,95 @@ export default function HomePage() {
                 </motion.div>
               </Link>
             ))}
+          </div>
+        </motion.section>
+
+        {/* Latest Blog Posts */}
+        <motion.section className="space-y-8" variants={fadeInUp}>
+          <div className="flex justify-between items-center">
+            <motion.h2 className="text-2xl font-mono">
+              Latest Articles
+            </motion.h2>
+            <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                variant="ghost"
+                className="text-white hover:text-black"
+                asChild
+              >
+                <Link href="/blogs" className="flex items-center gap-2">
+                  View All <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mediumBlogs
+              .slice(0, 3)
+              .map((post: MediumBlogPost, index: number) => (
+                <motion.div
+                  key={post.guid}
+                  variants={scaleUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative bg-gray-900/50 rounded-xl p-6 cursor-pointer border border-gray-800 hover:border-gray-700 transition-colors flex flex-col h-full"
+                >
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                    <BookOpen className="w-4 h-4" />
+                    <span>Blog Article</span>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-400 transition-colors leading-tight min-h-[3.5rem] flex items-start">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                    {cleanDescription(post.description)}
+                  </p>
+                  <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {new Date(post.pubDate).toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                      })}
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.categories.slice(0, 2).map((category: string) => (
+                      <span
+                        key={category}
+                        className="px-2 py-1 bg-black/50 rounded-full text-xs backdrop-blur-sm"
+                      >
+                        {category}
+                      </span>
+                    ))}
+                    {post.categories.length > 2 && (
+                      <span className="px-2 py-1 bg-black/30 rounded-full text-xs text-gray-400">
+                        +{post.categories.length - 2}
+                      </span>
+                    )}
+                  </div>
+                  <div className="mt-auto">
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className="w-full relative z-10"
+                      asChild
+                    >
+                      <Link
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Read Article
+                      </Link>
+                    </Button>
+                  </div>
+                </motion.div>
+              ))}
           </div>
         </motion.section>
 

@@ -7,6 +7,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  BookOpen,
 } from "lucide-react";
 import avatarImage from "../public/self.jpeg";
 
@@ -42,9 +43,8 @@ export const personalInfo = {
 
 export const cvUrl = `${portfolioInfo.portfolioUrl}/cv.pdf`;
 
-
 export const socialLinks = [
-  { name: "Email", href: "mailto:yzeraibi2000@gmail.com", icon: Mail },
+  { name: "Email", href: "mailto:aceiny.dev@gmail.com", icon: Mail },
   { name: "GitHub", href: "https://github.com/aceiny", icon: Github },
   {
     name: "LinkedIn",
@@ -59,10 +59,10 @@ export const navigation = [
   { name: "Education", href: "/education", icon: GraduationCap },
   { name: "Competitions", href: "/competitions", icon: Trophy },
   { name: "Projects", href: "/projects", icon: Folder },
+  { name: "Blogs", href: "/blogs", icon: BookOpen },
 ];
 
 // end of about data
-
 
 // skills data
 export const skills = {

@@ -45,12 +45,12 @@ export default function CompetitionsPage() {
               key={competition.title}
               variants={item}
               initial={{
-                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[0]}, ${competition.color.split(',')[1]})`,
+                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(",")[0]}, ${competition.color.split(",")[1]})`,
                 opacity: 1,
               }}
               whileHover={{
                 scale: 1.02,
-                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(',')[1]}, ${competition.color.split(',')[0]})`,
+                backgroundImage: `linear-gradient(to bottom right, ${competition.color.split(",")[1]}, ${competition.color.split(",")[0]})`,
               }}
               transition={{ duration: 0.3 }}
               className="rounded-xl overflow-hidden transition-all duration-300"

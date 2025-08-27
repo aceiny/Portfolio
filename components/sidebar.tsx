@@ -24,8 +24,8 @@ export function Sidebar() {
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
@@ -39,11 +39,7 @@ export function Sidebar() {
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-800 rounded-full"
       >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <Menu className="w-6 h-6" />
-        )}
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </motion.button>
 
       {/* Overlay */}
@@ -119,14 +115,18 @@ export function Sidebar() {
                   className="bg-gray-900/50 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-2xl font-bold">{personalInfo.githubStats.commits}</div>
+                  <div className="text-2xl font-bold">
+                    {personalInfo.githubStats.commits}
+                  </div>
                   <div className="text-sm text-gray-400">Github Commits</div>
                 </motion.div>
                 <motion.div
                   className="bg-gray-900/50 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-2xl font-bold">{personalInfo.githubStats.streak}</div>
+                  <div className="text-2xl font-bold">
+                    {personalInfo.githubStats.streak}
+                  </div>
                   <div className="text-sm text-gray-400">Day Streak</div>
                 </motion.div>
               </motion.div>
@@ -150,7 +150,10 @@ export function Sidebar() {
               </motion.div>
 
               {/* Download CV */}
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   className="w-full justify-start gap-2 bg-white hover:bg-gray-100 text-black"
                   asChild
