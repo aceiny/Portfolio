@@ -92,7 +92,7 @@ export default function ProjectsPage() {
                       </Button>
                     </Link>
                     <Link href={project.github}>
-                      <Button variant="secondary">  
+                      <Button variant="secondary">
                         <Github className="w-4 h-4 mr-2" />
                         Source Code
                       </Button>
