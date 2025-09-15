@@ -8,6 +8,7 @@ import {
   Linkedin,
   Mail,
   BookOpen,
+  MessageCircle,
 } from "lucide-react";
 import avatarImage from "../public/self.jpeg";
 
@@ -32,26 +33,10 @@ export const personalInfo = {
     commits: "2000+",
     streak: "75+",
   },
-  aboutMe: `
-  Full-Stack Developer skilled in Java, Python, JavaScript, and frameworks like React, Next.js, Express.js, Nest.js,
-  and FastAPI. Proficient in database management, cloud services, and tools such as Docker, Redis, and GitHub
-  Actions. Adept at building scalable, high-performance applications with a results-driven mindset, strong teamwork
-  skills, and a passion for continuous learning. Currently pursuing a degree in Computer Science, eager to tackle
-  technical challenges and deliver innovative solutions.
-  `,
 };
 
 export const cvUrl = `${portfolioInfo.portfolioUrl}/cv.pdf`;
 
-export const socialLinks = [
-  { name: "Email", href: "mailto:aceiny.dev@gmail.com", icon: Mail },
-  { name: "GitHub", href: "https://github.com/aceiny", icon: Github },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/yacine-zeraibi-1b8307300",
-    icon: Linkedin,
-  },
-];
 
 export const navigation = [
   { name: "Home", href: "/", icon: Home },
@@ -60,6 +45,7 @@ export const navigation = [
   { name: "Competitions", href: "/competitions", icon: Trophy },
   { name: "Projects", href: "/projects", icon: Folder },
   { name: "Blogs", href: "/blogs", icon: BookOpen },
+  { name: "Contact", href: "/contact", icon: MessageCircle },
 ];
 
 // end of about data

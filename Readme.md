@@ -149,6 +149,6 @@ This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` fi
 
 Zeraibi Ahmed Yassine
 
-- [Email](mailto:yzeraibi2000@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/yacine-zeraibi-1b8307300)
+- [Email](mailto:aceiny.dev@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/aceiny/)
 - [GitHub](https://github.com/aceiny)

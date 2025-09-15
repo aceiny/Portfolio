@@ -3,10 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronLeft, Mail, Github, Linkedin, Download } from "lucide-react";
+import { ChevronLeft, Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cvUrl, personalInfo, socialLinks } from "@/constants/data";
-import { quickStats } from "@/constants/about";
+import { personalInfo } from "@/constants/data";
+import { aboutMe, quickStats } from "@/constants/about";
+import { CVDownload } from "@/components/cv-download";
+import { socialLinks } from "@/constants/contact";
 
 const container = {
   hidden: { opacity: 0 },
@@ -53,7 +55,7 @@ export default function AboutPage() {
               className="text-lg text-gray-300 leading-relaxed"
               whileHover={{ scale: 1.01 }}
             >
-              {personalInfo.aboutMe}
+              {aboutMe.description}
             </motion.p>
 
             <motion.div
@@ -101,22 +103,7 @@ export default function AboutPage() {
                 whileHover={{ scale: 1.02 }}
               >
                 <h2 className="text-xl font-semibold mb-4">Resume</h2>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button className="w-full">
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={cvUrl}
-                      className="flex items-center gap-2"
-                    >
-                      <Download className="w-4 h-4" />
-                      Download CV
-                    </Link>
-                  </Button>
-                </motion.div>
+                <CVDownload />
               </motion.div>
             </motion.div>
           </motion.div>

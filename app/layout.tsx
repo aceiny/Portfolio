@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import type React from "react"; // Added import for React
 import { personalInfo, portfolioInfo } from "@/constants/data";
-import { MusicPlayer } from "@/components/music-player";
-
 export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
   description: portfolioInfo.portfolioDescription,
@@ -29,6 +28,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
+        <Toaster />
       </body>
     </html>
   );

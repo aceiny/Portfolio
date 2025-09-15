@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Download, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { cvUrl, navigation, personalInfo, socialLinks } from "@/constants/data";
+import { navigation, personalInfo } from "@/constants/data";
+import { CVDownload } from "@/components/cv-download";
+import { socialLinks } from "@/constants/contact";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -87,6 +88,7 @@ export function Sidebar() {
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   return (
+             
                     <motion.div
                       key={item.name}
                       whileHover={{ x: 4 }}
@@ -150,20 +152,7 @@ export function Sidebar() {
               </motion.div>
 
               {/* Download CV */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Button
-                  className="w-full justify-start gap-2 bg-white hover:bg-gray-100 text-black"
-                  asChild
-                >
-                  <Link target="_blank" rel="noopener noreferrer" href={cvUrl}>
-                    <Download className="w-4 h-4" />
-                    Download CV
-                  </Link>
-                </Button>
-              </motion.div>
+              <CVDownload />
 
               {/* Footer */}
               <motion.div className="text-sm text-gray-400">
