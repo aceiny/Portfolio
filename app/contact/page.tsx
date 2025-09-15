@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { contactEmail, socialLinks } from "@/constants/contact";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 const container = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,7 +42,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -52,11 +52,11 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-    if(!serviceId || !templateId || !publicKey) {
-        throw new Error("EmailJS configuration is missing.");
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error("EmailJS configuration is missing.");
     }
     try {
       await emailjs.send(
@@ -72,18 +72,18 @@ export default function ContactPage() {
           ${formData.email}
           ${formData.name}
           `,
-          to_email: contactEmail, 
+          to_email: contactEmail,
         },
-        publicKey
+        publicKey,
       );
 
       toast.success("Message sent!", {
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      
+
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-        console.error("EmailJS Error:", error);
+      console.error("EmailJS Error:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -109,10 +109,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <motion.div
-            className="bg-gray-900/50 rounded-xl p-6"
-            variants={item}
-          >
+          <motion.div className="bg-gray-900/50 rounded-xl p-6" variants={item}>
             <h2 className="text-2xl font-semibold mb-6">Send Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -177,7 +174,10 @@ export default function ContactPage() {
                   placeholder="Your message here..."
                 />
               </div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -186,7 +186,11 @@ export default function ContactPage() {
                   {isSubmitting ? (
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="w-4 h-4 border-2 border-black border-t-transparent rounded-full"
                     />
                   ) : (
@@ -209,9 +213,10 @@ export default function ContactPage() {
             >
               <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
               <p className="text-gray-300 leading-relaxed">
-                I'm always open to discussing new opportunities, interesting projects,
-                or just having a chat about technology and development. Feel free to
-                reach out through any of the channels below.
+                I'm always open to discussing new opportunities, interesting
+                projects, or just having a chat about technology and
+                development. Feel free to reach out through any of the channels
+                below.
               </p>
             </motion.div>
 
@@ -272,9 +277,7 @@ export default function ContactPage() {
 
         {/* Footer */}
         <motion.div className="text-center text-gray-400" variants={item}>
-          <p>
-            Based in Algeria • Available for remote work worldwide
-          </p>
+          <p>Based in Algeria • Available for remote work worldwide</p>
         </motion.div>
       </div>
     </motion.div>

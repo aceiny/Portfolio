@@ -58,15 +58,17 @@ Sent from your portfolio website
 
 1. Open `/app/contact/page.tsx`
 2. Uncomment the EmailJS import:
+
 ```typescript
 import emailjs from "@emailjs/browser";
 ```
 
 3. Replace the placeholder values in the `handleSubmit` function:
+
 ```typescript
 const result = await emailjs.send(
-  'YOUR_SERVICE_ID',    // Replace with your Service ID
-  'YOUR_TEMPLATE_ID',   // Replace with your Template ID
+  "YOUR_SERVICE_ID", // Replace with your Service ID
+  "YOUR_TEMPLATE_ID", // Replace with your Template ID
   {
     from_name: formData.name,
     from_email: formData.email,
@@ -74,11 +76,12 @@ const result = await emailjs.send(
     message: formData.message,
     to_name: personalInfo.name,
   },
-  'YOUR_PUBLIC_KEY'     // Replace with your Public Key
+  "YOUR_PUBLIC_KEY", // Replace with your Public Key
 );
 ```
 
 4. Remove or comment out the temporary simulation:
+
 ```typescript
 // Remove this line:
 // await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -89,6 +92,7 @@ const result = await emailjs.send(
 For security, store your EmailJS credentials in environment variables:
 
 1. Create a `.env.local` file in your project root:
+
 ```
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
@@ -96,6 +100,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
 2. Update the contact page to use environment variables:
+
 ```typescript
 const result = await emailjs.send(
   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -107,7 +112,7 @@ const result = await emailjs.send(
     message: formData.message,
     to_name: personalInfo.name,
   },
-  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
 );
 ```
 
@@ -130,6 +135,7 @@ const result = await emailjs.send(
 ## Free Tier Limits
 
 EmailJS free tier includes:
+
 - 200 emails per month
 - 2 email services
 - 1 email template

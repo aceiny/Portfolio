@@ -2,7 +2,7 @@ import { Description } from "@radix-ui/react-toast";
 
 export const aboutMe = {
   title: "About Me",
-description: `
+  description: `
 Passionate Full-Stack Developer with a strong foundation in Computer Science and hands-on expertise in building
 real-world, scalable applications. Skilled in Java, Python, and JavaScript/TypeScript, with deep experience across
 modern frameworks and technologies including React, Next.js, Express.js, NestJS, and FastAPI. Proficient in database
@@ -16,8 +16,7 @@ apply advanced problem-solving strategies, and push the boundaries of software e
 degree in Computer Science, I am eager to tackle complex technical challenges and contribute to innovative projects
 that make meaningful impact.
 `,
-
-}
+};
 export const quickStats = [
   { value: "2.5+", label: "Years Coding" },
   { value: "50+", label: "Projects" },

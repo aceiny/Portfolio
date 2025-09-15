@@ -88,7 +88,6 @@ export function Sidebar() {
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   return (
-             
                     <motion.div
                       key={item.name}
                       whileHover={{ x: 4 }}

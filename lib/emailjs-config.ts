@@ -19,7 +19,6 @@ export const emailjsConfig = {
   publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
 };
 
-
 // Example EmailJS template (create this in your EmailJS dashboard):
 /*
 Subject: New Contact Form Submission from {{from_name}}

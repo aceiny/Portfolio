@@ -1,9 +1,5 @@
 import exp from "constants";
-import {
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const socialLinks = [
   { name: "Email", href: "mailto:aceiny.dev@gmail.com", icon: Mail },

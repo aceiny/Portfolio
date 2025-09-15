@@ -58,21 +58,27 @@ export default function ProjectsPage() {
               whileTap={{ scale: 0.98 }}
               className="group relative bg-gray-900 rounded-xl overflow-hidden"
             >
-              <Link href={`/projects/${project.slug}`} className="block">
-                <div className="aspect-video relative">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+              <div className="block">
+                <Link href={`/projects/${project.slug}`}>
+                  <div className="aspect-video relative cursor-pointer">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </Link>
                 <motion.div
                   className="p-6 space-y-4"
                   initial={{ opacity: 0.8, y: 10 }}
                   whileHover={{ opacity: 1, y: 0 }}
                 >
-                  <h2 className="text-xl font-semibold">{project.title}</h2>
+                  <Link href={`/projects/${project.slug}`}>
+                    <h2 className="text-xl font-semibold cursor-pointer hover:text-gray-300 transition-colors">
+                      {project.title}
+                    </h2>
+                  </Link>
                   <p className="text-gray-400">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
@@ -85,13 +91,21 @@ export default function ProjectsPage() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <Link href={project.link}>
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button className="bg-white hover:bg-gray-100 text-black">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         View Live
                       </Button>
                     </Link>
-                    <Link href={project.github}>
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button variant="secondary">
                         <Github className="w-4 h-4 mr-2" />
                         Source Code
@@ -99,7 +113,7 @@ export default function ProjectsPage() {
                     </Link>
                   </div>
                 </motion.div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>
