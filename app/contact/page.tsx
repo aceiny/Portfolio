@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronLeft, Send, MapPin, Phone } from "lucide-react";
+import { ChevronLeft, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -267,9 +267,9 @@ export default function ContactPage() {
             >
               <h3 className="text-xl font-semibold mb-4">Response Time</h3>
               <div className="space-y-2 text-gray-300">
-                <p>📧 Email: Within 24 hours</p>
-                <p>💼 LinkedIn: Within 12 hours</p>
-                <p>⚡ Urgent matters: Use email with "URGENT" in subject</p>
+                <p>Email: Within 24 hours</p>
+                <p>LinkedIn: Within 12 hours</p>
+                <p>Urgent matters: Use email with "URGENT" in subject</p>
               </div>
             </motion.div>
           </motion.div>
@@ -277,7 +277,7 @@ export default function ContactPage() {
 
         {/* Footer */}
         <motion.div className="text-center text-gray-400" variants={item}>
-          <p>Based in Algeria • Available for remote work worldwide</p>
+          <p>Based in France • Available for remote work worldwide</p>
         </motion.div>
       </div>
     </motion.div>

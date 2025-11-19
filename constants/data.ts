@@ -4,9 +4,6 @@ import {
   Trophy,
   Folder,
   User,
-  Github,
-  Linkedin,
-  Mail,
   BookOpen,
   MessageCircle,
 } from "lucide-react";
@@ -18,7 +15,7 @@ export const portfolioInfo = {
   portfolioDescription: "Portfolio showcasing my work in software development",
   portfolioHomeHeaderDescription:
     "Building innovative web and mobile applications and solving complex problems through elegant code.",
-  getInTouch: "https://www.linkedin.com/in/yacine-zeraibi-1b8307300",
+  getInTouch: "https://www.linkedin.com/in/aceiny",
 };
 // end of portfolio data
 
@@ -28,6 +25,7 @@ export const personalInfo = {
   role: "Full Stack Developer",
   developer: "aceiny",
   year: "2025",
+  startYear: 2022,
   avatar: avatarImage,
   githubStats: {
     commits: "2000+",

@@ -27,13 +27,14 @@ export function CVDownload({ className, buttonClassName }: CVDownloadProps) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className={`w-full justify-between gap-2 bg-white hover:bg-gray-100 text-black ${buttonClassName || ""}`}
+            size={"sm"}
+            className={`w-full justify-between gap-1.5 bg-white hover:bg-gray-100 text-black ${buttonClassName || ""}`}
           >
-            <div className="flex items-center gap-2">
-              <Download className="w-4 h-4" />
+            <div className="flex items-center gap-1.5">
+              <Download className="w-3.5 h-3.5" />
               Download CV
             </div>
-            <ChevronDown className="w-4 h-4" />
+            <ChevronDown className="w-3.5 h-3.5" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent

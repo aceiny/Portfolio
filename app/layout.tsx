@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Sidebar } from "@/components/sidebar";
+import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import type React from "react"; // Added import for React
 import { personalInfo, portfolioInfo } from "@/constants/data";
@@ -22,9 +22,9 @@ export default function RootLayout({
         <link rel="icon" href="/icon.ico" sizes="any" />
       </head>
       <body className="bg-black text-white overflow-x-hidden">
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <main className="flex-1 ml-0 lg:ml-[400px] p-4 lg:p-8">
+        <div className="min-h-screen">
+          <Navbar />
+          <main className="pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24">
             {children}
           </main>
         </div>

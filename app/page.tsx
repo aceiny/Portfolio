@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
+import { ArrowRight, BookOpen, Calendar } from "lucide-react";
 import { TechStack } from "@/components/tech-stack";
 import { portfolioInfo } from "@/constants/data";
 import { featuredProjects } from "@/constants/projects";
@@ -78,11 +78,11 @@ export default function HomePage() {
       >
         {/* Hero Section */}
         <motion.section
-          className="min-h-[80vh] flex flex-col justify-center"
+          className="min-h-[80vh] w-full flex flex-col justify-center items-center text-center py-12 md:py-20"
           variants={fadeInUp}
         >
-          <div className="space-y-8 ">
-            <motion.h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <div className="space-y-12 w-full px-4">
+            <motion.h1 className="text-6xl md:text-8xl font-bold leading-tight">
               Crafting Digital{" "}
               <motion.span
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 inline-block"
@@ -101,13 +101,13 @@ export default function HomePage() {
               <br />
               with Code
             </motion.h1>
-            <motion.p className="text-xl text-gray-400 max-w-2xl">
+            <motion.p className="text-xl md:text-2xl text-gray-400 mx-auto leading-relaxed">
               {portfolioInfo.portfolioHomeHeaderDescription}
             </motion.p>
-            <motion.div className="flex gap-4">
+            <motion.div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
               <Button
                 size="lg"
-                className="rounded-full group relative overflow-hidden bg-white hover:bg-gray-100 text-black"
+                className="rounded-full group relative overflow-hidden bg-white hover:bg-gray-100 text-black h-12 text-base"
                 asChild
               >
                 <Link href="/projects">
@@ -121,7 +121,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="rounded-full "
+                className="rounded-full h-12 text-base"
                 asChild
               >
                 <Link href="/about">About Me</Link>
