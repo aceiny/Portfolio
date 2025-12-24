@@ -1,4 +1,3 @@
-import { Description } from "@radix-ui/react-toast";
 
 export const aboutMe = {
   title: "About Me",
@@ -18,7 +17,7 @@ that make meaningful impact.
 `,
 };
 export const quickStats = [
-  { value: "2.5+", label: "Years Coding" },
+  { value: "3+", label: "Years Coding" },
   { value: "50+", label: "Projects" },
   { value: "2000+", label: "Commits" },
   { value: "75+", label: "Day Streak" },
