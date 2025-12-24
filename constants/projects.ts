@@ -20,7 +20,80 @@ import plueaScreenshot_1 from "@/public/projects/pluae/pluae_screenshot_1.png";
 import plueaScreenshot_2 from "@/public/projects/pluae/pluae_screenshot_2.png";
 import plueaScreenshot_3 from "@/public/projects/pluae/pluae_screenshot_3.png";
 import pluaeAvatar from "@/public/projects/pluae/pluae_avatar.png";
+import prolink_feed from "@/public/projects/prolink/prolink-feed.png";
+import prolink_my_enterprise from "@/public/projects/prolink/prolink-my-enterprise.png";
+import prolink_annonce from "@/public/projects/prolink/prolink-annonce.png";
+import prolink_enterprise from "@/public/projects/prolink/prolink-enterprise.png";
+import prolink_search from "@/public/projects/prolink/prolink-search.png";
+import rafik_avatar from "@/public/projects/prolink/rafik_kouider_hacen.jpeg";
+import prolink_tickets from "@/public/projects/prolink/prolink-tickets.png";
+import prolink_logo from "@/public/projects/prolink/prolink-logo.png";
+
 export const featuredProjects = [
+  {
+    title: "Prolink - B2B Network",
+    slug: "prolink",
+    description:
+      "A comprehensive B2B professional networking platform for the Algerian market, featuring real-time messaging, live webinars, and announcement management.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "NextAuth.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "React Hook Form",
+      "Zustand",
+      "Zod",
+      "TanStack Query",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "tRPC",
+      "WebSocket",
+      "LiveKit",
+      "Redis",
+      "Docker",
+      "Stripe",
+      "MinIO S3",
+    ],
+    image: prolink_logo,
+  },
+  {
+    title: "Survision",
+    slug: "survision",
+    description:
+      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
+  tech: [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Next.js",
+      "React.js",
+      "React Native",
+      "TailwindCSS",
+      "Framer Motion",
+      "Zustand",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "Axios",
+      "Nest.js",
+      "TypeORM",
+      "Nominatim",
+      "Postgresql",
+      "Redis",
+      "MinioS3",
+      "Coolify",
+      "Docker",
+      "Cpanel",
+      "Nginx",
+      "Graphana",
+      "Loki",
+      "Promtail",
+    ],
+    image: survision_avatar,
+  },
   {
     title: "MyQcm aljazayr",
     slug: "my-qcm-aljazayr",
@@ -30,27 +103,6 @@ export const featuredProjects = [
     image: myqcm_avatar,
   },
   {
-    title: "Survision",
-    slug: "survision",
-    description:
-      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
-    tech: [
-      "Typescript",
-      "Next.js",
-      "React.js",
-      "React Native",
-      "Nest.js",
-      "Postgresql",
-      "Redis",
-      "Minio",
-      "Nginx",
-      "Docker",
-      "Nominatim",
-      "Cpanel",
-    ],
-    image: survision_avatar,
-  },
-  {
     title: "Enssea website",
     slug: "enssea-website",
     description:
@@ -58,27 +110,194 @@ export const featuredProjects = [
     tech: ["Next.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
     image: enssea_avatar,
   },
-  // {
-  //   title: "LockSphere",
-  //   slug: "lock-sphere",
-  //   description:
-  //   "A robust password management solution designed to securely store and manage sensitive credentials with modern encryption technologies",
-  //   tech: [
-  //     "NestJS",
-  //     "Next.js",
-  //     "TypeScript",
-  //     "TailwindCSS",
-  //     "Shadcn UI",
-  //     "PostgreSQL",
-  //     "Redis",
-  //     "Bull Queue",
-  //     "Cloudinary"
-  //   ],
-  //   image: lockSphere_avatar,
-  // },
 ];
 
 export const projects = [
+  {
+    title: "Prolink - B2B Professional Network",
+    slug: "prolink",
+    description:
+      "Prolink is a comprehensive B2B professional networking platform designed specifically for the Algerian business market, connecting enterprises through announcements, real-time messaging, and interactive webinars.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "NextAuth.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "React Hook Form",
+      "Zustand",
+      "Zod",
+      "TanStack Query",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "tRPC",
+      "WebSocket",
+      "LiveKit",
+      "Redis",
+      "Docker",
+      "Stripe",
+      "MinIO S3",
+    ],
+    longDescription: `
+    Developed a complete B2B networking platform frontend using Next.js 15 with App Router and Server Components for optimal performance and SEO.
+    Built a real-time messaging interface with WebSocket integration, featuring conversation lists, message threads, read receipts, and team assignment capabilities with a polished two-pane layout.
+    Designed and implemented a sophisticated announcement feed system with dynamic filtering, search functionality, and category-based navigation using React components and TailwindCSS.
+    Integrated LiveKit client SDK to create interactive webinar rooms with video/audio controls, participant management, and real-time streaming capabilities.
+    Developed responsive UI components for the payment flow, supporting multiple Algerian payment methods with Stripe integration for subscriptions and boost purchases.
+    Created complex form systems using React Hook Form and Zod validation for announcement creation, user registration, enterprise profiles, and multi-step onboarding flows.
+    Implemented a professional social feed with publication composer, image galleries, masonry layouts using react-masonry-css, and engagement features.
+    Built advanced search and filtering interfaces with debounced inputs, multi-select dropdowns, and real-time result updates.
+    Developed reusable UI component library with Radix UI primitives, ensuring accessibility and consistent design across the platform.
+    Implemented state management using Zustand for global UI state, cart management, and user preferences with persistence.
+    Created smooth animations and transitions using Framer Motion for modals, page transitions, and interactive elements.
+    Optimized image loading and rendering with Next.js Image component and implemented lazy loading for better performance.
+  `,
+    image: prolink_logo,
+    date: "Aug 2025 - Dec 2025",
+    link: "",
+    github: "",
+    features: [
+      "Multi-Type Announcement Feed & Management UI",
+      "Announcement Boost & Promotion Dashboard",
+      "Enterprise Profile & Management Interface",
+      "Department & Team Collaboration UI",
+      "Role-Based Dashboard Views",
+      "Subscription & Plan Selection UI",
+      "Professional Social Feed",
+      "Advanced Search & Filtering Interface",
+      "Multi-Step Payment Flow (Algerian Market)",
+      "Real-Time Messaging Interface with WebSocket",
+      "File Upload Interface with Progress Tracking",
+      "Two-Factor Authentication Flow",
+      "Live Webinar Client with LiveKit Integration",
+      "Responsive Design (Mobile & Desktop)",
+    ],
+    challenges: [
+      "Building a real-time chat UI that handles message optimistic updates, read receipts, and typing indicators seamlessly",
+      "Creating dynamic form components that adapt based on announcement category selection with proper validation",
+      "Integrating LiveKit client for smooth webinar experiences while managing UI state for camera/mic controls and participant views",
+      "Implementing complex responsive layouts with TailwindCSS that work across mobile, tablet, and desktop viewports",
+      "Optimizing image galleries and feed performance with lazy loading and intersection observers for infinite scroll",
+      "Building accessible UI components using Radix UI while maintaining custom styling and animations",
+      "Managing complex form state across multi-step flows with proper validation and error handling",
+      "Creating smooth real-time UI updates for WebSocket messages while preventing race conditions and maintaining message order",
+    ],
+    screenshots: [
+      prolink_feed,
+      prolink_my_enterprise,
+      prolink_enterprise,
+      prolink_annonce,
+      prolink_search,
+      prolink_tickets,
+    ],
+    testimonial: {
+      quote:
+        "The Prolink platform has transformed how Algerian businesses connect and collaborate. The real-time messaging and announcement system provides exactly what our B2B market needs.",
+      name: "Rafik kouider hacen",
+      role: "Project Manager",
+      avatar: rafik_avatar,
+    },
+    nextProject: {
+      slug: "survision",
+      title: "Survision",
+    },
+  },
+  {
+    title: "Survision ",
+    slug: "survision",
+    description:
+      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
+    tech: [
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Next.js",
+      "React.js",
+      "React Native",
+      "TailwindCSS",
+      "Framer Motion",
+      "Zustand",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "Axios",
+      "Nest.js",
+      "TypeORM",
+      "Nominatim",
+      "Postgresql",
+      "Redis",
+      "MinioS3",
+      "Coolify",
+      "Docker",
+      "Cpanel",
+      "Nginx",
+      "Graphana",
+      "Loki",
+      "Promtail",
+    ],
+    longDescription: `
+      Developed the backend using NestJS, TypeORM, PostgreSQL, Redis, and TypeScript, alongside a mobile
+      application with React Native, integrating secure APIs and real-time features.
+      Managed deployment servers with Nginx, configured domain names, ensured server security, and optimized
+      performance.
+      `,
+    image: survision_avatar,
+    date: "Aug 2024",
+    link: "https://survision.io",
+    github: "https://github.com/aceiny/survision",
+    features: [
+      "Survey Creation and Management: Allows admins to create, update, and manage surveys, including setting titles, descriptions, target audiences, and pricing.",
+      "Region-Based Targeting: Enables surveys to be targeted to specific geographic regions (Wilayas) within Algeria.",
+      "Collector Management: Provides tools for managing collectors, including status verification and profile updates.",
+      "Real-time Location Tracking: Uses collector location data to assign relevant surveys based on proximity.",
+      "Create a nominatim library to manage location searching and reverse geocoding.",
+      "Diffrent qusetion types: Supports multiple question types, including multiple-choice with others , free , radio ,etc...",
+      "Survey Assignment and Filtering: Implements logic to assign surveys to collectors based on their location and survey status (active, paused, completed).",
+      "Role-Based Access Control: Implements different roles (admin, collector, company) with associated permissions.",
+      "Data Analytics and Reporting: Includes features for counting surveys, tracking survey status, and calculating response rates.",
+      "Payment and Transaction Management: Supports payment processing and transaction tracking for collectors.",
+      "Reports : Allow user to send reports and manage them.",
+      "Fraud Detection: Implements mechanisms to detect and prevent fraudulent activities and submissions by collectors.",
+      "Authentication and Authorization: Implements secure login and registration processes for different user roles.",
+      "Detailed Statistics: Provides in-depth statistics on surveys, collectors, and responses for better decision-making.",
+      "Email Notifications: Sends email notifications for various events, such as account verification and demo requests.",
+      "Collector Referral System: Implements a referral system for collectors to invite others and earn rewards.",
+      "Company Referral System: Enables companies to refer their collectors to Survision.",
+      "Company Profile Management: Allows companies to manage their profiles, including company size, contact information, and website details.",
+      "API Documentation with Swagger: Uses Swagger to document and expose the API endpoints.",
+    ],
+    challenges: [
+      "Ensuring accurate location data and survey assignment.",
+      "Maintaining data privacy and security, especially regarding user location and personal information.",
+      "Scaling the platform to handle a large number of surveys, collectors, and responses.",
+      "Optimizing database queries for performance, especially when filtering surveys by Wilaya and status.",
+      "Handling potential conflicts when adding Wilayas to surveys.",
+      "Implementing robust error handling and logging.",
+      "Managing collector verification and status updates.",
+      "Integrating with external services for location data and payment processing.",
+      "Creating a user-friendly interface for survey creation and management.",
+      "Keeping the application up-to-date with the latest security patches and best practices.",
+    ],
+    screenshots: [
+      survision_screenshot_1,
+      survision_screenshot_2,
+      survision_screenshot_3,
+    ],
+
+    testimonial: {
+      quote:
+        "aceiny's commitment to excellence and innovative approach significantly enhanced our platform's performance and user experience. His contributions have been invaluable to Survision's success",
+      name: "Abdelbasset Meghraoui,",
+      role: "Founder & CEO of Survision",
+      avatar: survision_testi,
+    },
+    nextProject: {
+      slug: "my-qcm-aljazayr",
+      title: "MyQcm aljazayr",
+    },
+  },
   {
     title: "MyQcm aljazayr",
     slug: "my-qcm-aljazayr",
@@ -120,79 +339,8 @@ export const projects = [
       avatar: myqcm_testi,
     },
     nextProject: {
-      slug: "survision",
-      title: "survision",
-    },
-  },
-  {
-    title: "Survision ",
-    slug: "survision",
-    description:
-      "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
-    tech: [
-      "Typescript",
-      "Next.js",
-      "React.js",
-      "React Native",
-      "Nest.js",
-      "Postgresql",
-      "Redis",
-      "Minio",
-      "Nginx",
-      "Docker",
-      "Nominatim",
-      "Cpanel",
-    ],
-    longDescription: `
-      Developed the backend using NestJS, TypeORM, PostgreSQL, Redis, and TypeScript, alongside a mobile
-      application with React Native, integrating secure APIs and real-time features.
-      Managed deployment servers with Nginx, configured domain names, ensured server security, and optimized
-      performance.
-      `,
-    image: survision_avatar,
-    date: "Aug 2024",
-    link: "https://survision.io",
-    github: "https://github.com/aceiny/survision",
-    features: [
-      "Survey Creation and Management: Allows admins to create, update, and manage surveys, including setting titles, descriptions, target audiences, and pricing.",
-      "Wilaya-Based Targeting: Enables surveys to be targeted to specific geographic regions (Wilayas) within Algeria.",
-      "Collector Management: Provides tools for managing collectors, including status verification and profile updates.",
-      "Real-time Location Tracking: Uses collector location data to assign relevant surveys based on proximity.",
-      "Role-Based Access Control: Implements different roles (admin, collector, company) with associated permissions.",
-      "Data Analytics and Reporting: Includes features for counting surveys, tracking survey status, and calculating response rates.",
-      "Payment and Transaction Management: Supports payment processing and transaction tracking for collectors.",
-      "API Documentation with Swagger: Uses Swagger to document and expose the API endpoints.",
-      "Email Notifications: Sends email notifications for various events, such as account verification and demo requests.",
-      "Company Profile Management: Allows companies to manage their profiles, including company size, contact information, and website details.",
-    ],
-    challenges: [
-      "Ensuring accurate location data and survey assignment.",
-      "Maintaining data privacy and security, especially regarding user location and personal information.",
-      "Scaling the platform to handle a large number of surveys, collectors, and responses.",
-      "Optimizing database queries for performance, especially when filtering surveys by Wilaya and status.",
-      "Handling potential conflicts when adding Wilayas to surveys.",
-      "Implementing robust error handling and logging.",
-      "Managing collector verification and status updates.",
-      "Integrating with external services for location data and payment processing.",
-      "Creating a user-friendly interface for survey creation and management.",
-      "Keeping the application up-to-date with the latest security patches and best practices.",
-    ],
-    screenshots: [
-      survision_screenshot_1,
-      survision_screenshot_2,
-      survision_screenshot_3,
-    ],
-
-    testimonial: {
-      quote:
-        "aceiny's commitment to excellence and innovative approach significantly enhanced our platform's performance and user experience. His contributions have been invaluable to Survision's success",
-      name: "Abdelbasset Meghraoui,",
-      role: "Founder & CEO of Survision",
-      avatar: survision_testi,
-    },
-    nextProject: {
       slug: "enssea-website",
-      title: "enssea website",
+      title: "Enssea website",
     },
   },
 
