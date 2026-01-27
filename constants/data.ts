@@ -33,7 +33,6 @@ export const personalInfo = {
   },
 };
 
-export const cvUrl = `${portfolioInfo.portfolioUrl}/cv.pdf`;
 
 export const navigation = [
   { name: "Home", href: "/", icon: Home },
