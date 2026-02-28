@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { techStack } from "@/constants/tachStack";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const container = {
   hidden: { opacity: 0 },
@@ -27,6 +28,42 @@ const item = {
 };
 
 export function TechStack() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <section className="space-y-6">
+        <h2 className="text-2xl font-mono">Technical Expertise</h2>
+        <div className="grid grid-cols-1 gap-4">
+          {techStack.map((category) => (
+            <div
+              key={category.title}
+              style={{
+                backgroundImage: `linear-gradient(to bottom right, ${category.color.split(",")[0]}, ${category.color.split(",")[0]})`,
+              }}
+              className="rounded-xl p-6 backdrop-blur-xs hover:shadow-lg"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <category.icon className="w-5 h-5" />
+                <h3 className="font-semibold">{category.title}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 rounded-full text-sm bg-background/20 backdrop-blur-xs hover:bg-background/30 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   return (
     <motion.section
       className="space-y-6"
@@ -47,7 +84,7 @@ export function TechStack() {
             style={{
               backgroundImage: `linear-gradient(to bottom right, ${category.color.split(",")[0]}, ${category.color.split(",")[0]})`,
             }}
-            className={`rounded-xl p-6  backdrop-blur-xs transition-all duration-300 hover:shadow-lg`}
+            className="rounded-xl p-6 backdrop-blur-xs transition-all duration-300 hover:shadow-lg"
           >
             <motion.div
               className="flex items-center gap-2 mb-4"
@@ -71,9 +108,9 @@ export function TechStack() {
                 },
               }}
             >
-              {category.items.map((item) => (
+              {category.items.map((tech) => (
                 <motion.span
-                  key={item}
+                  key={tech}
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
                     visible: { opacity: 1, scale: 1 },
@@ -81,7 +118,7 @@ export function TechStack() {
                   whileHover={{ scale: 1.05 }}
                   className="px-2 py-1 rounded-full text-sm bg-background/20 backdrop-blur-xs hover:bg-background/30 transition-colors"
                 >
-                  {item}
+                  {tech}
                 </motion.span>
               ))}
             </motion.div>
