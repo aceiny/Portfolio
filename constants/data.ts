@@ -21,7 +21,7 @@ export const portfolioInfo = {
 
 // about data
 export const personalInfo = {
-  name: "Ahmed Yassine Zeraibi",
+  name: "Yassine Zeraibi",
   role: "Full Stack Developer",
   developer: "aceiny",
   year: "2025",

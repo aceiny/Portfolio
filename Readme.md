@@ -147,7 +147,7 @@ This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` fi
 
 ## Contact
 
-Zeraibi Ahmed Yassine
+Zeraibi Yassine
 
 - [Email](mailto:aceiny.dev@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/aceiny/)
