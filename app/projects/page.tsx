@@ -21,7 +21,7 @@ export default function ProjectsPage() {
     >
       <div className="w-full max-w-7xl mx-auto space-y-8">
         <motion.div
-          className="flex items-center justify-between"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
           variants={fadeInUp}
         >
           <div className="flex items-center gap-4">
@@ -32,14 +32,14 @@ export default function ProjectsPage() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-sm text-default-400 hidden sm:block">
+            <span className="text-sm text-default-400">
               {totalCount} projects
             </span>
             <Select
               aria-label="Sort projects"
               selectedKeys={[sortBy]}
               onChange={(e) => setSortBy(e.target.value)}
-              className="w-40 sm:w-44"
+              className="w-full sm:w-44"
               size="md"
               variant="bordered"
               defaultSelectedKeys={["newest"]}
