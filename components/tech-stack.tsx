@@ -47,7 +47,7 @@ export function TechStack() {
             style={{
               backgroundImage: `linear-gradient(to bottom right, ${category.color.split(",")[0]}, ${category.color.split(",")[0]})`,
             }}
-            className={`rounded-xl p-6  backdrop-blur-sm transition-all duration-300 hover:shadow-lg`}
+            className={`rounded-xl p-6  backdrop-blur-xs transition-all duration-300 hover:shadow-lg`}
           >
             <motion.div
               className="flex items-center gap-2 mb-4"
@@ -79,7 +79,7 @@ export function TechStack() {
                     visible: { opacity: 1, scale: 1 },
                   }}
                   whileHover={{ scale: 1.05 }}
-                  className="px-2 py-1 rounded-full text-sm bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-colors"
+                  className="px-2 py-1 rounded-full text-sm bg-black/20 backdrop-blur-xs hover:bg-black/30 transition-colors"
                 >
                   {item}
                 </motion.span>

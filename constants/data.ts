@@ -33,7 +33,6 @@ export const personalInfo = {
   },
 };
 
-
 export const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/about", icon: User },

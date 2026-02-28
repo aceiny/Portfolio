@@ -63,7 +63,7 @@ export const featuredProjects = [
     slug: "survision",
     description:
       "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
-  tech: [
+    tech: [
       "TypeScript",
       "JavaScript",
       "HTML",

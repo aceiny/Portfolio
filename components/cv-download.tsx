@@ -39,7 +39,7 @@ export function CVDownload({ className, buttonClassName }: CVDownloadProps) {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="start"
-          className="w-[var(--radix-dropdown-menu-trigger-width)]"
+          className="w-(--radix-dropdown-menu-trigger-width)"
         >
           {CV_LINKS.map((cvLink) => (
             <DropdownMenuItem key={cvLink.language} asChild>

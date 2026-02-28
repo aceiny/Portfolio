@@ -46,7 +46,7 @@ export default function EducationPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              className="absolute -left-11 p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full"
+              className="absolute -left-11 p-2 bg-linear-to-br from-blue-500 to-blue-600 rounded-full"
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
@@ -120,7 +120,7 @@ export default function EducationPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              className="absolute -left-11 p-2 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full"
+              className="absolute -left-11 p-2 bg-linear-to-br from-purple-500 to-purple-600 rounded-full"
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
@@ -198,7 +198,7 @@ export default function EducationPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              className="absolute -left-11 p-2 bg-gradient-to-br from-green-500 to-green-600 rounded-full"
+              className="absolute -left-11 p-2 bg-linear-to-br from-green-500 to-green-600 rounded-full"
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
@@ -247,7 +247,7 @@ export default function EducationPage() {
                       visible: { opacity: 1, scale: 1 },
                     }}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 px-4 py-3 rounded-lg"
+                    className="bg-linear-to-r from-yellow-500/20 to-yellow-600/20 px-4 py-3 rounded-lg"
                   >
                     <div className="font-semibold">Bac: 16.58</div>
                     <div className="text-sm text-gray-400">
@@ -260,7 +260,7 @@ export default function EducationPage() {
                       visible: { opacity: 1, scale: 1 },
                     }}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 px-4 py-3 rounded-lg"
+                    className="bg-linear-to-r from-yellow-500/20 to-yellow-600/20 px-4 py-3 rounded-lg"
                   >
                     <div className="font-semibold">Mathematics: 19.5/20</div>
                     <div className="text-sm text-gray-400">

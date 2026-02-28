@@ -56,7 +56,7 @@ export default function CompetitionsPage() {
               className="rounded-xl overflow-hidden transition-all duration-300"
             >
               <motion.div
-                className="p-6 backdrop-blur-sm"
+                className="p-6 backdrop-blur-xs"
                 initial={{ opacity: 0.8 }}
                 whileHover={{ opacity: 1 }}
               >

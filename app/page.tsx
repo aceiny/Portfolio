@@ -85,7 +85,7 @@ export default function HomePage() {
             <motion.h1 className="text-6xl md:text-8xl font-bold leading-tight">
               Crafting Digital{" "}
               <motion.span
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 inline-block"
+                className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-purple-500 inline-block"
                 animate={{
                   scale: [1, 1.02, 1],
                   opacity: [1, 0.8, 1],
@@ -112,7 +112,7 @@ export default function HomePage() {
               >
                 <Link href="/projects">
                   <motion.span
-                    className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"
                     whileHover={{ scale: 1.2 }}
                   />
                   <span className="relative font-medium">View Projects</span>
@@ -165,7 +165,7 @@ export default function HomePage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
                     <h3 className="text-xl font-bold">{project.title}</h3>
                     <p className="text-gray-300 mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       {project.description}
@@ -174,7 +174,7 @@ export default function HomePage() {
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-black/50 rounded-full text-xs backdrop-blur-sm"
+                          className="px-3 py-1 bg-black/50 rounded-full text-xs backdrop-blur-xs"
                         >
                           {tech}
                         </span>
@@ -224,10 +224,10 @@ export default function HomePage() {
                     <BookOpen className="w-4 h-4" />
                     <span>Blog Article</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-400 transition-colors leading-tight min-h-[3.5rem] flex items-start">
+                  <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-400 transition-colors leading-tight min-h-14 flex items-start">
                     {post.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-3 grow">
                     {cleanDescription(post.description)}
                   </p>
                   <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
@@ -244,7 +244,7 @@ export default function HomePage() {
                     {post.categories.slice(0, 2).map((category: string) => (
                       <span
                         key={category}
-                        className="px-2 py-1 bg-black/50 rounded-full text-xs backdrop-blur-sm"
+                        className="px-2 py-1 bg-black/50 rounded-full text-xs backdrop-blur-xs"
                       >
                         {category}
                       </span>
@@ -306,7 +306,7 @@ export default function HomePage() {
             >
               <Link href={portfolioInfo.getInTouch}>
                 <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ scale: 1.2 }}
                 />
                 <span className="relative font-medium">Get in Touch</span>

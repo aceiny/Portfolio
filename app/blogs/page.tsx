@@ -100,7 +100,7 @@ export default function BlogsPage() {
         transition={{ duration: 0.5 }}
         className="mb-16"
       >
-        <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r py-1 from-white to-sky-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-linear-to-r py-1 from-white to-sky-600 bg-clip-text text-transparent">
           Blog Articles
         </h1>
         <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
@@ -126,7 +126,7 @@ export default function BlogsPage() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
-                <Card className="bg-gray-900/30 border-gray-800/50 h-full hover:bg-gray-900/50 hover:border-gray-700/50 transition-all duration-300 backdrop-blur-sm group flex flex-col">
+                <Card className="bg-gray-900/30 border-gray-800/50 h-full hover:bg-gray-900/50 hover:border-gray-700/50 transition-all duration-300 backdrop-blur-xs group flex flex-col">
                   <CardHeader className="pb-4">
                     {post.thumbnail && (
                       <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">

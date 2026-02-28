@@ -27,12 +27,12 @@ export function Navbar() {
       <div className="flex items-center justify-between gap-2 sm:gap-4">
         {/* Section 1: whoami dropdown */}
         <motion.div
-          className="bg-gray-900/80 backdrop-blur-sm px-3 py-2 sm:px-4 rounded-2xl border border-gray-800"
+          className="bg-gray-900/80 backdrop-blur-xs px-3 py-2 sm:px-4 rounded-2xl border border-gray-800"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1.5 sm:gap-2 focus:outline-none">
+            <DropdownMenuTrigger className="flex items-center gap-1.5 sm:gap-2 focus:outline-hidden">
               <Image
                 src={personalInfo.avatar}
                 alt="Profile"
@@ -45,7 +45,7 @@ export function Navbar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
-              className="bg-gray-900/95 backdrop-blur-sm border-gray-800 text-white min-w-[240px]"
+              className="bg-gray-900/95 backdrop-blur-xs border-gray-800 text-white min-w-[240px]"
             >
               <DropdownMenuItem className="flex flex-col items-start py-3 focus:bg-gray-800 focus:text-white">
                 <span className="text-xs text-gray-400 mb-1">Name</span>
@@ -65,7 +65,7 @@ export function Navbar() {
 
         {/* Section 2: Navigation links */}
         <motion.div
-          className="hidden lg:flex items-center gap-2 bg-gray-900/80 backdrop-blur-sm px-4 py-2 rounded-2xl border border-gray-800"
+          className="hidden lg:flex items-center gap-2 bg-gray-900/80 backdrop-blur-xs px-4 py-2 rounded-2xl border border-gray-800"
           whileHover={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
@@ -93,7 +93,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden bg-gray-900/80 backdrop-blur-sm p-2 rounded-2xl border border-gray-800"
+            className="lg:hidden bg-gray-900/80 backdrop-blur-xs p-2 rounded-2xl border border-gray-800"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -106,7 +106,7 @@ export function Navbar() {
 
           {/* Section 3: Contact & CV */}
           <motion.div
-            className="flex items-center gap-2 sm:gap-3 bg-gray-900/80 backdrop-blur-sm px-3 py-2 sm:px-4 rounded-2xl border border-gray-800"
+            className="flex items-center gap-2 sm:gap-3 bg-gray-900/80 backdrop-blur-xs px-3 py-2 sm:px-4 rounded-2xl border border-gray-800"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -147,7 +147,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-3">
+            <div className="bg-gray-900/80 backdrop-blur-xs rounded-2xl border border-gray-800 p-3">
               <div className="grid grid-cols-2 gap-2">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
