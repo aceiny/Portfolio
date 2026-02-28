@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { navigation, personalInfo } from "@/constants/data";
-import { CVDownload } from "@/components/cv-download";
+import { CVDownload } from "@/components/common/cv-download";
 import { socialLinks } from "@/constants/contact";
 
 export function Sidebar() {
@@ -38,7 +38,7 @@ export function Sidebar() {
         initial={false}
         animate={{ x: isOpen ? 240 : 0 }}
         onClick={toggleSidebar}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-800 rounded-full"
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-content2 rounded-full"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </motion.button>
@@ -62,7 +62,7 @@ export function Sidebar() {
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: "spring", bounce: 0.1 }}
-            className="fixed top-0 left-0 h-screen w-[300px] lg:w-[400px] border-r border-gray-800 bg-black p-8 overflow-y-auto z-40"
+            className="fixed top-0 left-0 h-screen w-[300px] lg:w-[400px] border-r border-divider bg-background p-8 overflow-y-auto z-40"
           >
             <div className="space-y-8">
               {/* Profile */}
@@ -79,7 +79,7 @@ export function Sidebar() {
                 />
                 <div>
                   <h1 className="text-2xl font-mono">{personalInfo.name}.</h1>
-                  <p className="text-gray-400">{personalInfo.role}</p>
+                  <p className="text-default-500">{personalInfo.role}</p>
                 </div>
               </motion.div>
 
@@ -98,8 +98,8 @@ export function Sidebar() {
                         onClick={() => isMobile && setIsOpen(false)}
                         className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
                           isActive
-                            ? "bg-gray-800 text-white"
-                            : "text-gray-400 hover:text-white hover:bg-gray-800/50"
+                            ? "bg-content2 text-foreground"
+                            : "text-default-500 hover:text-foreground hover:bg-content2"
                         }`}
                       >
                         <item.icon className="w-5 h-5" />
@@ -113,22 +113,22 @@ export function Sidebar() {
               {/* Quick Stats */}
               <motion.div className="grid grid-cols-2 gap-4">
                 <motion.div
-                  className="bg-gray-900/50 p-4 rounded-xl"
+                  className="bg-content1 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="text-2xl font-bold">
                     {personalInfo.githubStats.commits}
                   </div>
-                  <div className="text-sm text-gray-400">Github Commits</div>
+                  <div className="text-sm text-default-500">Github Commits</div>
                 </motion.div>
                 <motion.div
-                  className="bg-gray-900/50 p-4 rounded-xl"
+                  className="bg-content1 p-4 rounded-xl"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="text-2xl font-bold">
                     {personalInfo.githubStats.streak}
                   </div>
-                  <div className="text-sm text-gray-400">Day Streak</div>
+                  <div className="text-sm text-default-500">Day Streak</div>
                 </motion.div>
               </motion.div>
 
@@ -140,7 +140,7 @@ export function Sidebar() {
                     rel="noopener noreferrer"
                     key={link.name}
                     href={link.href}
-                    className="p-3 rounded-full bg-gray-900/50 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+                    className="p-3 rounded-full bg-content1 text-default-500 hover:text-foreground hover:bg-content2 transition-colors"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -154,7 +154,7 @@ export function Sidebar() {
               <CVDownload />
 
               {/* Footer */}
-              <motion.div className="text-sm text-gray-400">
+              <motion.div className="text-sm text-default-500">
                 <p>
                   © {personalInfo.year} {personalInfo.developer}. All rights
                   reserved.

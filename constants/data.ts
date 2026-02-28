@@ -1,12 +1,12 @@
 import {
-  Home,
-  GraduationCap,
-  Trophy,
-  Folder,
-  User,
-  BookOpen,
-  MessageCircle,
-} from "lucide-react";
+  HomeSmileBold,
+  SquareAcademicCapBold,
+  CupStarBold,
+  FolderBold,
+  UserBold,
+  BookBold,
+  ChatRoundDotsBold,
+} from "@solar-icons/react-perf";
 import avatarImage from "../public/self.jpeg";
 
 // start of portfolio data
@@ -34,13 +34,13 @@ export const personalInfo = {
 };
 
 export const navigation = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: User },
-  { name: "Education", href: "/education", icon: GraduationCap },
-  { name: "Competitions", href: "/competitions", icon: Trophy },
-  { name: "Projects", href: "/projects", icon: Folder },
-  { name: "Blogs", href: "/blogs", icon: BookOpen },
-  { name: "Contact", href: "/contact", icon: MessageCircle },
+  { name: "Home", href: "/", icon: HomeSmileBold },
+  { name: "About", href: "/about", icon: UserBold },
+  { name: "Education", href: "/education", icon: SquareAcademicCapBold },
+  { name: "Competitions", href: "/competitions", icon: CupStarBold },
+  { name: "Projects", href: "/projects", icon: FolderBold },
+  { name: "Blogs", href: "/blogs", icon: BookBold },
+  { name: "Contact", href: "/contact", icon: ChatRoundDotsBold },
 ];
 
 // end of about data

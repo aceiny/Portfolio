@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
-import { Toaster } from "@/components/ui/sonner";
 import type React from "react"; // Added import for React
 import { personalInfo, portfolioInfo } from "@/constants/data";
+import RootLayoutProvider from "@/providers/root-layout-provider";
 export const metadata: Metadata = {
   title: `${personalInfo.name}. - ${personalInfo.role}`,
   description: portfolioInfo.portfolioDescription,
@@ -17,18 +16,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icon.ico" sizes="any" />
       </head>
-      <body className="bg-black text-white overflow-x-hidden">
-        <div className="min-h-screen">
+      <body className="bg-background text-foreground overflow-x-hidden">
+        <RootLayoutProvider>{children}</RootLayoutProvider>
+        {/* <div className="min-h-screen">
           <Navbar />
           <main className="pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24">
-            {children}
           </main>
-        </div>
-        <Toaster />
+        </div> */}
       </body>
     </html>
   );

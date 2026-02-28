@@ -79,7 +79,7 @@ export function TechStack() {
                     visible: { opacity: 1, scale: 1 },
                   }}
                   whileHover={{ scale: 1.05 }}
-                  className="px-2 py-1 rounded-full text-sm bg-black/20 backdrop-blur-xs hover:bg-black/30 transition-colors"
+                  className="px-2 py-1 rounded-full text-sm bg-background/20 backdrop-blur-xs hover:bg-background/30 transition-colors"
                 >
                   {item}
                 </motion.span>

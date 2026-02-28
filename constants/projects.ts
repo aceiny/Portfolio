@@ -30,6 +30,24 @@ import prolink_tickets from "@/public/projects/prolink/prolink-tickets.png";
 import prolink_logo from "@/public/projects/prolink/prolink-logo.png";
 
 export const featuredProjects = [
+  // {
+  //   title: "Ra9man - Administrative Assistance Platform",
+  //   slug: "ra9man",
+  //   description:
+  //     "A full-stack administrative platform tailored for elderly and non-literate users, featuring RAG-based conversational assistant and voice-driven user journeys.",
+  //   tech: [
+  //     "Next.js",
+  //     "NestJS",
+  //     "FastAPI",
+  //     "TypeScript",
+  //     "Python",
+  //     "PostgreSQL",
+  //     "RAG",
+  //     "OCR",
+  //     "Speech-to-Text",
+  //   ],
+  //   image: null,
+  // },
   {
     title: "Prolink - B2B Network",
     slug: "prolink",
@@ -490,9 +508,63 @@ export const projects = [
       avatar: "",
     },
     nextProject: {
-      slug: "next-project-slug",
-      title: "Next Project Title",
+      slug: "ra9man",
+      title: "Ra9man - Administrative Assistance Platform",
     },
   },
-  // Add more projects as needed
+  {
+    title: "Ra9man - Administrative Assistance Platform",
+    slug: "ra9man",
+    description:
+      "A full-stack administrative platform tailored for elderly and non-literate users, featuring RAG-based conversational assistant and voice-driven user journeys.",
+    tech: [
+      "Next.js",
+      "NestJS",
+      "FastAPI",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "RAG",
+      "OCR",
+      "Speech-to-Text",
+    ],
+    longDescription: `
+      Reduced manual form handling by 60% by designing and building an accessible full-stack administrative platform tailored for elderly and non-literate users.
+      Accelerated request processing by 40% via automated classification, routing, and role-based access control across government departments.
+      Implemented a RAG-based conversational assistant exposed via a FastAPI service and integrated with a NestJS backend, enabling users to submit requests via natural language conversations.
+      Enabled fully voice-driven user journeys by integrating AI-powered OCR, speech-to-text, and document extraction pipelines to process paper-based forms and route structured data to the appropriate administrative agents.
+    `,
+    image: null,
+    date: "June 2023 – August 2023",
+    link: "",
+    github: "",
+    features: [
+      "Accessible Interface for Elderly & Non-Literate Users",
+      "RAG-Based Conversational Assistant",
+      "Voice-Driven User Journeys",
+      "AI-Powered OCR & Document Extraction",
+      "Speech-to-Text Integration",
+      "Automated Request Classification & Routing",
+      "Role-Based Access Control",
+      "Government Department Integration",
+    ],
+    challenges: [
+      "Designing an accessible UI for non-literate users",
+      "Integrating RAG pipeline with production backend",
+      "Building reliable voice-driven workflows",
+      "Processing paper-based forms with OCR accuracy",
+      "Routing structured data across government departments",
+    ],
+    screenshots: [],
+    testimonial: {
+      quote: "No testimonial available",
+      name: "undefined",
+      role: "undefined",
+      avatar: "",
+    },
+    nextProject: {
+      slug: "prolink",
+      title: "Prolink - B2B Professional Network",
+    },
+  },
 ];

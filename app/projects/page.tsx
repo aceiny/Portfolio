@@ -1,120 +1,62 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronLeft, ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { projects } from "@/constants/projects";
-
-const container = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { ChevronLeft } from "lucide-react";
+import { Button } from "@heroui/button";
+import { Select, SelectItem } from "@heroui/select";
+import { staggerContainer, fadeInUp } from "@/lib/animations";
+import { useProjectSort, sortOptions } from "@/hooks/use-project-sort.hook";
+import { ProjectCard } from "@/components/page/projects";
 
 export default function ProjectsPage() {
+  const { sortBy, setSortBy, sortedProjects, totalCount } = useProjectSort();
+
   return (
     <motion.div
-      className="min-h-screen bg-black text-white p-1 md:p-6"
+      className="min-h-screen p-2 md:p-6"
       initial="hidden"
       animate="visible"
-      variants={container}
+      variants={staggerContainer}
     >
-      <div className="max-w-6xl mx-auto space-y-8">
-        <motion.div className="flex items-center gap-4" variants={item}>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="/">
+      <div className="w-full max-w-7xl mx-auto space-y-8">
+        <motion.div
+          className="flex items-center justify-between"
+          variants={fadeInUp}
+        >
+          <div className="flex items-center gap-4">
+            <Button as={Link} href="/" variant="light" isIconOnly>
               <ChevronLeft className="w-6 h-6" />
-            </Link>
-          </Button>
-          <h1 className="text-3xl font-mono">Projects</h1>
+            </Button>
+            <h1 className="text-3xl font-mono">Projects</h1>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-default-400 hidden sm:block">
+              {totalCount} projects
+            </span>
+            <Select
+              aria-label="Sort projects"
+              selectedKeys={[sortBy]}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="w-40 sm:w-44"
+              size="md"
+              variant="bordered"
+              defaultSelectedKeys={["newest"]}
+            >
+              {sortOptions.map((option) => (
+                <SelectItem key={option.key}>{option.label}</SelectItem>
+              ))}
+            </Select>
+          </div>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          variants={container}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+          variants={staggerContainer}
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              variants={item}
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative bg-gray-900 rounded-xl overflow-hidden"
-            >
-              <div className="block">
-                <Link href={`/projects/${project.slug}`}>
-                  <div className="aspect-video relative cursor-pointer">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                </Link>
-                <motion.div
-                  className="p-6 space-y-4"
-                  initial={{ opacity: 0.8, y: 10 }}
-                  whileHover={{ opacity: 1, y: 0 }}
-                >
-                  <Link href={`/projects/${project.slug}`}>
-                    <h2 className="text-xl font-semibold cursor-pointer hover:text-gray-300 transition-colors">
-                      {project.title}
-                    </h2>
-                  </Link>
-                  <p className="text-gray-400">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 rounded-full text-sm bg-black/40"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button className="bg-white hover:bg-gray-100 text-black">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View Live
-                      </Button>
-                    </Link>
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="secondary">
-                        <Github className="w-4 h-4 mr-2" />
-                        Source Code
-                      </Button>
-                    </Link>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+          {sortedProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
           ))}
         </motion.div>
       </div>
