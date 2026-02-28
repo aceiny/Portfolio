@@ -536,7 +536,7 @@ export const projects = [
     `,
     image: null,
     date: "June 2023 – August 2023",
-    link: "",
+    link: "https://raqmen.app",
     github: "",
     features: [
       "Accessible Interface for Elderly & Non-Literate Users",
