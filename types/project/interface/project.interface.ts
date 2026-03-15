@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { ProjectType } from "../enum/project-type.enum";
 
 export interface ProjectTestimonial {
   quote: string;
@@ -18,16 +19,17 @@ export interface FeaturedProject {
   description: string;
   tech: string[];
   image: StaticImageData | null;
+  projectType?: ProjectType;
 }
 
 export interface Project extends FeaturedProject {
   longDescription: string;
   date: string;
-  link: string;
-  github: string;
+  link: string | null;
+  github: string | null;
   features: string[];
   challenges: string[];
   screenshots: (string | StaticImageData)[];
-  testimonial: ProjectTestimonial;
-  nextProject: ProjectNextLink;
+  testimonial: ProjectTestimonial | null;
+  nextProject: ProjectNextLink | null;
 }

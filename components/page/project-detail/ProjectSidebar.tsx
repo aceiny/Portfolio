@@ -34,28 +34,51 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
         </div>
 
         <div className="space-y-2">
-          <Button
-            as={Link}
-            href={project.link}
-            target="_blank"
-            variant="ghost"
-            rel="noopener noreferrer"
-            className="w-full flex items-center gap-2"
-          >
-            <ExternalLink className="w-4 h-4" />
-            View Live Demo
-          </Button>
-          <Button
-            as={Link}
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="solid"
-            className="w-full flex items-center gap-2"
-          >
-            <Github className="w-4 h-4" />
-            View Source Code
-          </Button>
+          {project.link ? (
+            <Button
+              as={Link}
+              href={project.link}
+              target="_blank"
+              variant="ghost"
+              rel="noopener noreferrer"
+              className="w-full flex items-center gap-2"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View Live Demo
+            </Button>
+          ) : (
+            <Button
+              isDisabled
+              variant="ghost"
+              className="w-full flex items-center gap-2 opacity-50 cursor-not-allowed"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Live preview not available
+            </Button>
+          )}
+
+          {project.github ? (
+            <Button
+              as={Link}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="solid"
+              className="w-full flex items-center gap-2"
+            >
+              <Github className="w-4 h-4" />
+              View Source Code
+            </Button>
+          ) : (
+            <Button
+              isDisabled
+              variant="solid"
+              className="w-full flex items-center gap-2 opacity-50 cursor-not-allowed"
+            >
+              <Github className="w-4 h-4" />
+              Source code not available
+            </Button>
+          )}
         </div>
       </div>
 

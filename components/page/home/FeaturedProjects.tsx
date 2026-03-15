@@ -3,8 +3,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@heroui/button";
+import { Chip } from "@heroui/chip";
 import { fadeInUp } from "@/lib/animations";
 import { featuredProjects } from "@/constants/projects";
+import { getProjectTypeColor } from "@/lib/project";
 
 const itemVariant = {
   hidden: { opacity: 0, y: 16 },
@@ -48,22 +50,46 @@ export default function FeaturedProjects() {
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-default-600 mt-2 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-background/50 rounded-full text-xs backdrop-blur-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent transition-all duration-500 group-hover:bg-black/60 group-hover:backdrop-blur-[2px] z-0" />
+              <div className="absolute inset-0 p-6 flex flex-col justify-end z-10 overflow-hidden">
+                <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-400 ease-out flex flex-col gap-2">
+                  <div className="flex justify-between items-start gap-4">
+                    <h3 className="text-xl font-bold text-white drop-shadow-md">
+                      {project.title}
+                    </h3>
+                    {project.projectType && (
+                      <Chip
+                        color={getProjectTypeColor(project.projectType)}
+                        variant="flat"
+                        size="sm"
+                        className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        {project.projectType}
+                      </Chip>
+                    )}
+                  </div>
+
+                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-400 ease-out">
+                    <div className="overflow-hidden">
+                      <div className="max-h-[100px] overflow-y-auto custom-scrollbar flex flex-col gap-3 pb-1 mt-1 pr-1">
+                        <p className="text-default-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed">
+                          {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+                          {project.tech.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-0.5 bg-white/10 text-white/90 rounded-full text-[10px] backdrop-blur-md border border-white/10"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

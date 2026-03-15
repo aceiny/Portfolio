@@ -1,25 +1,49 @@
+import { ProjectType } from "@/types/project";
+//MyQcm
 import myqcm_avatar from "@/public/projects/myqcm/myqcm_avatar.svg";
-import myqcm_screenshot_1 from "@/public/projects/myqcm/myqcm_screenshot1.svg";
-import myqcm_screenshot_2 from "@/public/projects/myqcm/myqcm_screenshot2.svg";
-import myqcm_screenshot_3 from "@/public/projects/myqcm/myqcm_screenshot3.svg";
+import myqcm_screenshot_1 from "@/public/projects/myqcm/myqcm_screenshot1.png";
+import myqcm_screenshot_2 from "@/public/projects/myqcm/myqcm_screenshot2.png";
+import myqcm_screenshot_3 from "@/public/projects/myqcm/myqcm_screenshot3.png";
+import myqcm_screenshot_4 from "@/public/projects/myqcm/myqcm_screenshot4.png";
+import myqcm_screenshot_5 from "@/public/projects/myqcm/myqcm_screenshot5.png";
+import myqcm_screenshot_6 from "@/public/projects/myqcm/myqcm_screenshot6.png";
 import myqcm_testi from "@/public/projects/myqcm/myqcm_testi.jpeg";
+
+//Survision
 import survision_avatar from "@/public/projects/survision/survision._avatar.svg";
 import survision_screenshot_1 from "@/public/projects/survision/survision_screenshot1.svg";
 import survision_screenshot_2 from "@/public/projects/survision/survision_screenshot2.svg";
 import survision_screenshot_3 from "@/public/projects/survision/survision_screenshot3.svg";
 import survision_testi from "@/public/projects/survision/survision_testi.jpeg";
+
+//Enssea
 import enssea_avatar from "@/public/projects/enssea/enssea_avatar.svg";
-import enssea_screenshot_1 from "@/public/projects/enssea/enssea_screenshot1.svg";
-import enssea_screenshot_2 from "@/public/projects/enssea/enssea_screenshot2.svg";
-import enssea_screenshot_3 from "@/public/projects/enssea/enssea_screenshot3.svg";
+import enssea_screenshot_1 from "@/public/projects/enssea/enssea_screenshot1.png";
+import enssea_screenshot_2 from "@/public/projects/enssea/enssea_screenshot2.png";
+import enssea_screenshot_3 from "@/public/projects/enssea/enssea_screenshot3.png";
+import enssea_screenshot_4 from "@/public/projects/enssea/enssea_screenshot4.png";
+import enssea_screenshot_5 from "@/public/projects/enssea/enssea_screenshot5.png";
+import enssea_screenshot_6 from "@/public/projects/enssea/enssea_screenshot6.png";
+
+//LockSphere
 import lockSphere_screenshot_1 from "@/public/projects/locksphere/locksphere_screenshot1.png";
 import lockSphere_screenshot_2 from "@/public/projects/locksphere/locksphere_screenshot2.png";
 import lockSphere_screenshot_3 from "@/public/projects/locksphere/locksphere_screenshot3.png";
 import lockSphere_avatar from "@/public/projects/locksphere/locksphere_avatar.png";
+
+//PLUAE
 import plueaScreenshot_1 from "@/public/projects/pluae/pluae_screenshot_1.png";
 import plueaScreenshot_2 from "@/public/projects/pluae/pluae_screenshot_2.png";
 import plueaScreenshot_3 from "@/public/projects/pluae/pluae_screenshot_3.png";
 import pluaeAvatar from "@/public/projects/pluae/pluae_avatar.png";
+
+//Ra9man
+import raqman_logo from "@/public/projects/raqman/raqman_logo.svg";
+import raqman_screenshot1 from "@/public/projects/raqman/raqman_screenshot1.png";
+import raqman_screenshot2 from "@/public/projects/raqman/raqman_screenshot2.png";
+import raqman_screenshot3 from "@/public/projects/raqman/raqman_screenshot3.png";
+
+//Prolink
 import prolink_feed from "@/public/projects/prolink/prolink-feed.png";
 import prolink_my_enterprise from "@/public/projects/prolink/prolink-my-enterprise.png";
 import prolink_annonce from "@/public/projects/prolink/prolink-annonce.png";
@@ -29,25 +53,10 @@ import rafik_avatar from "@/public/projects/prolink/rafik_kouider_hacen.jpeg";
 import prolink_tickets from "@/public/projects/prolink/prolink-tickets.png";
 import prolink_logo from "@/public/projects/prolink/prolink-logo.png";
 
+//NestJS Nominatim
+import nestjs_nominatim_logo from "@/public/projects/nestjs-nominatim/nominatim.jpeg";
+
 export const featuredProjects = [
-  // {
-  //   title: "Ra9man - Administrative Assistance Platform",
-  //   slug: "ra9man",
-  //   description:
-  //     "A full-stack administrative platform tailored for elderly and non-literate users, featuring RAG-based conversational assistant and voice-driven user journeys.",
-  //   tech: [
-  //     "Next.js",
-  //     "NestJS",
-  //     "FastAPI",
-  //     "TypeScript",
-  //     "Python",
-  //     "PostgreSQL",
-  //     "RAG",
-  //     "OCR",
-  //     "Speech-to-Text",
-  //   ],
-  //   image: null,
-  // },
   {
     title: "Prolink - B2B Network",
     slug: "prolink",
@@ -75,6 +84,7 @@ export const featuredProjects = [
       "MinIO S3",
     ],
     image: prolink_logo,
+    projectType: ProjectType.Freelance,
   },
   {
     title: "Survision",
@@ -111,6 +121,7 @@ export const featuredProjects = [
       "Promtail",
     ],
     image: survision_avatar,
+    projectType: ProjectType.Contract,
   },
   {
     title: "MyQcm aljazayr",
@@ -119,14 +130,7 @@ export const featuredProjects = [
       "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
     tech: ["Nest.js", "Typescript", "Postgresql", "Redis", "OpenAI"],
     image: myqcm_avatar,
-  },
-  {
-    title: "Enssea website",
-    slug: "enssea-website",
-    description:
-      "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
-    tech: ["Next.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
-    image: enssea_avatar,
+    projectType: ProjectType.Freelance,
   },
 ];
 
@@ -134,6 +138,7 @@ export const projects = [
   {
     title: "Prolink - B2B Professional Network",
     slug: "prolink",
+    projectType: ProjectType.Freelance_B2B,
     description:
       "Prolink is a comprehensive B2B professional networking platform designed specifically for the Algerian business market, connecting enterprises through announcements, real-time messaging, and interactive webinars.",
     tech: [
@@ -156,25 +161,26 @@ export const projects = [
       "Docker",
       "Stripe",
       "MinIO S3",
+      "shadcn/ui",
+      "Material UI",
     ],
     longDescription: `
-    Developed a complete B2B networking platform frontend using Next.js 15 with App Router and Server Components for optimal performance and SEO.
-    Built a real-time messaging interface with WebSocket integration, featuring conversation lists, message threads, read receipts, and team assignment capabilities with a polished two-pane layout.
-    Designed and implemented a sophisticated announcement feed system with dynamic filtering, search functionality, and category-based navigation using React components and TailwindCSS.
+    Developed a complete B2B networking platform frontend using Next.js 15 with App Router, Server Components, and TypeScript. Improved performance and SEO by 30%, increasing page load speed and boosting Lighthouse scores from 72 to 96.
+    Built a real-time messaging interface with WebSocket integration, featuring conversation lists, message threads, read receipts, and team assignment capabilities. Enhanced real-time data responsiveness by 45% using WebSockets, TanStack Query, and tRPC.
+    Reduced frontend runtime errors by 35% and improved API integration reliability by implementing shared type-safe contracts (tRPC) across the stack.
+    Designed and implemented a sophisticated announcement feed system with dynamic filtering, search functionality, and category-based navigation.
     Integrated LiveKit client SDK to create interactive webinar rooms with video/audio controls, participant management, and real-time streaming capabilities.
     Developed responsive UI components for the payment flow, supporting multiple Algerian payment methods with Stripe integration for subscriptions and boost purchases.
     Created complex form systems using React Hook Form and Zod validation for announcement creation, user registration, enterprise profiles, and multi-step onboarding flows.
-    Implemented a professional social feed with publication composer, image galleries, masonry layouts using react-masonry-css, and engagement features.
-    Built advanced search and filtering interfaces with debounced inputs, multi-select dropdowns, and real-time result updates.
-    Developed reusable UI component library with Radix UI primitives, ensuring accessibility and consistent design across the platform.
+    Developed a reusable, accessible UI component library with Radix UI primitives, shadcn/ui, Material UI, and TailwindCSS. Cut feature delivery time by 25% and improved UI consistency across the platform.
+    Strengthened code quality and reduced technical debt by collaborating within a team of 5 engineers through structured code reviews, GitHub workflows, and CI practices.
     Implemented state management using Zustand for global UI state, cart management, and user preferences with persistence.
     Created smooth animations and transitions using Framer Motion for modals, page transitions, and interactive elements.
-    Optimized image loading and rendering with Next.js Image component and implemented lazy loading for better performance.
   `,
     image: prolink_logo,
-    date: "Aug 2025 - Dec 2025",
-    link: "",
-    github: "",
+    date: "Sep 2025 - Jan 2026",
+    link: "https://getprolink.com/",
+    github: null,
     features: [
       "Multi-Type Announcement Feed & Management UI",
       "Announcement Boost & Promotion Dashboard",
@@ -224,6 +230,7 @@ export const projects = [
   {
     title: "Survision ",
     slug: "survision",
+    projectType: ProjectType.FullTime,
     description:
       "Survision is a market research platform, specializing in data collection and analysis for businesses in Algeria",
     tech: [
@@ -246,6 +253,7 @@ export const projects = [
       "Nominatim",
       "Postgresql",
       "Redis",
+      "BullMQ",
       "MinioS3",
       "Coolify",
       "Docker",
@@ -254,17 +262,20 @@ export const projects = [
       "Graphana",
       "Loki",
       "Promtail",
+      "Uptime Kuma",
     ],
     longDescription: `
-      Developed the backend using NestJS, TypeORM, PostgreSQL, Redis, and TypeScript, alongside a mobile
-      application with React Native, integrating secure APIs and real-time features.
-      Managed deployment servers with Nginx, configured domain names, ensured server security, and optimized
-      performance.
+      Built and scaled an end-to-end data collection platform supporting 1,000+ monthly active users and processing 50,000+ responses/month using NestJS, TypeORM, PostgreSQL, Redis, and TypeScript.
+      Developed the mobile application with React Native (Expo), integrating secure APIs and real-time features.
+      Optimized platform performance by 35% and lowered operational costs by replacing Google Maps APIs with a self-hosted Nominatim service and developing a cached geolocation module.
+      Increased system reliability and processing speed by 42% by designing scalable background job systems for notifications, emails, referrals, and survey workflows using Redis and BullMQ.
+      Designed and operated production infrastructure on private VPS using Docker, Coolify, Nginx, and Traefik, implementing CI/CD pipelines, Linux hardening, and a self-hosted S3-compatible object storage (MinioS3).
+      Maintained 99.5%+ system uptime and reduced incident resolution time by implementing centralized logging, real-time monitoring, and automated alerting using a self-hosted Grafana stack, Loki, Promtail, and Uptime Kuma.
       `,
     image: survision_avatar,
-    date: "Aug 2024",
+    date: "Aug 2024 - Sep 2025",
     link: "https://survision.io",
-    github: "https://github.com/aceiny/survision",
+    github: null,
     features: [
       "Survey Creation and Management: Allows admins to create, update, and manage surveys, including setting titles, descriptions, target audiences, and pricing.",
       "Region-Based Targeting: Enables surveys to be targeted to specific geographic regions (Wilayas) within Algeria.",
@@ -321,18 +332,30 @@ export const projects = [
     slug: "my-qcm-aljazayr",
     description:
       "MyQCM is an advanced AI-driven e-learning platform designed to revolutionize medical education",
-    tech: ["Nest.js", "Typescript", "Postgresql", "Redis", "OpenAI"],
+    tech: [
+      "Nest.js",
+      "Typescript",
+      "Postgresql",
+      "Redis",
+      "OpenAI",
+      "IRT",
+      "BKT",
+      "Cloudinary",
+      "Chargily",
+      "Prisma",
+    ],
     longDescription: `
-      Rebuilt the backend with NestJS, TypeScript, and PostgreSQL, redesigning the database schema for improved
-      performance and maintainability.
-      Migrated existing data to the new schema while ensuring data integrity.
+      Architected and rebuilt a scalable backend system using NestJS, TypeScript, PostgreSQL, and Redis, redesigning the database schema for improved data integrity, reliability, and long-term maintainability.
+      Migrated existing data to the new schema safely while managing database optimizations.
+      Developed an adaptive learning engine using Item Response Theory (IRT) and Bayesian Knowledge Tracing (BKT) to personalize learning paths in real time based on user performance.
+      Implemented a secure multi-role access and monetization system including subscriptions, payments, feature gating, and role-based permissions.
       Collaborated with a team of three on architecture, API integration, and project optimization.
-      The project won 2nd place at Eductek, a startup-focused conference.
+      Boosted platform engagement and credibility through real-time notifications, contributing to a 2nd place finish at Educteck, a national EdTech exhibition in Algeria.
       `,
     image: myqcm_avatar,
-    date: "Aug 2024",
+    date: "Oct 2023 - Feb 2024",
     link: "https://myqcmdz.com/",
-    github: "https://github.com/aceiny/my_qcm",
+    github: null,
     features: [
       "MCQ Entry and Management:",
       "Automated Payment Calculation",
@@ -348,10 +371,17 @@ export const projects = [
       "Handling high concurrent user loads",
       "Ensuring data privacy and security",
     ],
-    screenshots: [myqcm_screenshot_1, myqcm_screenshot_2, myqcm_screenshot_3],
+    screenshots: [
+      myqcm_screenshot_1,
+      myqcm_screenshot_2,
+      myqcm_screenshot_3,
+      myqcm_screenshot_4,
+      myqcm_screenshot_5,
+      myqcm_screenshot_6,
+    ],
     testimonial: {
       quote:
-        "Collaborating with aceiny on the MyQCM Aljazayer project was a transformative experience. His expertise in Nest.js, PostgreSQL, Redis, and OpenAI was instrumental in rebuilding our backend infrastructure",
+        "Collaborating with yassine on the MyQCM Aljazayer project was a transformative experience. His expertise in Nest.js, PostgreSQL, Redis, and OpenAI was instrumental in rebuilding our backend infrastructure",
       name: "Rayane Boucheraine",
       role: "CTO, MyQcm",
       avatar: myqcm_testi,
@@ -360,21 +390,32 @@ export const projects = [
       slug: "enssea-website",
       title: "Enssea website",
     },
+    projectType: ProjectType.Freelance,
   },
 
   {
     title: "Enssea website",
     slug: "enssea-website",
+    projectType: ProjectType.Freelance,
     description:
       "Presentative website for ECOLE NATIONALE SUPÉRIEURE DE STATISTIQUE ET D'ECONOMIE APPLIQUÉE",
-    tech: ["Next.js", "Typescript", "TailwindCSS", "Shadcn", "Cpanel"],
+    tech: [
+      "Next.js",
+      "ReactJS",
+      "TypeScript",
+      "Zod",
+      "RHF",
+      "TailwindCSS",
+      "Shadcn",
+      "Cpanel",
+    ],
     longDescription: `
       I developed a comprehensive website for the National Higher School of Statistics and Applied Economics (ENSSEA) using Next.js, TypeScript, TailwindCSS, and Shadcn, integrated it seamlessly with a Laravel backend, and managed deployment through cPanel, resulting in a dynamic, responsive, and user-friendly platform that effectively serves the needs of ENSSEA's students, faculty, and stakeholders.
       `,
     image: enssea_avatar,
     date: "Jan 2025",
     link: "https://enssea.edu.dz",
-    github: "https://github.com/aceiny/enssea",
+    github: null,
     features: [
       "Dynamic Event Card Component:",
       "Centralized API Configuration",
@@ -395,6 +436,9 @@ export const projects = [
       enssea_screenshot_1,
       enssea_screenshot_2,
       enssea_screenshot_3,
+      enssea_screenshot_4,
+      enssea_screenshot_5,
+      enssea_screenshot_6,
     ],
     testimonial: {
       quote: "No testimonial available",
@@ -410,6 +454,7 @@ export const projects = [
   {
     title: "LockSphere",
     slug: "lock-sphere",
+    projectType: ProjectType.Personal,
     description:
       "A robust password management solution designed to securely store and manage sensitive credentials with modern encryption technologies",
     tech: [
@@ -428,7 +473,7 @@ export const projects = [
       `,
     image: lockSphere_avatar, // You'll need to provide this
     date: "Feb 2025",
-    link: "https://lock.yxne.tech",
+    link: null,
     github: "https://github.com/aceiny/lock-sphere", // Update with your actual repo
     features: [
       "Secure Password Storage with AES-256-GCM Encryption",
@@ -450,7 +495,7 @@ export const projects = [
       "Ensuring scalability and maintainability",
     ],
     screenshots: [
-      lockSphere_screenshot_1, // You'll need to provide these
+      lockSphere_screenshot_1,
       lockSphere_screenshot_2,
       lockSphere_screenshot_3,
     ],
@@ -467,6 +512,7 @@ export const projects = [
   },
   {
     title: "PLUAE Platform",
+    projectType: ProjectType.Freelance,
     slug: "pluae-platform",
     description:
       "PLUAE (Platforme de Liaison Universités – ANEM – Entreprises) is a digital platform that connects Algerian universities, the National Employment Agency (ANEM), economic institutions, and students to streamline graduate employment and job matching processes.",
@@ -480,8 +526,8 @@ export const projects = [
   `,
     image: pluaeAvatar,
     date: "2024",
-    link: "https://github.com/aceiny/pluae-",
-    github: "https://github.com/aceiny/pluae-",
+    link: null,
+    github: null,
     features: [
       "Multi-Stakeholder Dashboard",
       "Intelligent Job Matching System",
@@ -508,13 +554,14 @@ export const projects = [
       avatar: "",
     },
     nextProject: {
-      slug: "ra9man",
-      title: "Ra9man - Administrative Assistance Platform",
+      slug: "raqman",
+      title: "Raqman - Administrative Assistance Platform",
     },
   },
   {
-    title: "Ra9man - Administrative Assistance Platform",
-    slug: "ra9man",
+    title: "Raqman - Administrative Assistance Platform",
+    slug: "raqman",
+    projectType: ProjectType.Freelance,
     description:
       "A full-stack administrative platform tailored for elderly and non-literate users, featuring RAG-based conversational assistant and voice-driven user journeys.",
     tech: [
@@ -534,7 +581,7 @@ export const projects = [
       Implemented a RAG-based conversational assistant exposed via a FastAPI service and integrated with a NestJS backend, enabling users to submit requests via natural language conversations.
       Enabled fully voice-driven user journeys by integrating AI-powered OCR, speech-to-text, and document extraction pipelines to process paper-based forms and route structured data to the appropriate administrative agents.
     `,
-    image: null,
+    image: raqman_logo,
     date: "June 2023 – August 2023",
     link: "https://raqmen.app",
     github: "",
@@ -555,13 +602,58 @@ export const projects = [
       "Processing paper-based forms with OCR accuracy",
       "Routing structured data across government departments",
     ],
-    screenshots: [],
+    screenshots: [raqman_screenshot1, raqman_screenshot2, raqman_screenshot3],
     testimonial: {
       quote: "No testimonial available",
       name: "undefined",
       role: "undefined",
       avatar: "",
     },
+    nextProject: {
+      slug: "nestjs-nominatim",
+      title: "NestJS Nominatim",
+    },
+  },
+  {
+    title: "NestJS Nominatim",
+    slug: "nestjs-nominatim",
+    projectType: ProjectType.Personal,
+    description:
+      "A powerful and easy-to-use NestJS library for integrating with the Nominatim API (OpenStreetMap geocoding service). Provides a clean, type-safe interface for performing geocoding, reverse geocoding, and place lookups.",
+    tech: [
+      "NestJS",
+      "TypeScript",
+      "Nominatim API",
+      "OpenStreetMap",
+      "REST API",
+      "Caching",
+    ],
+    longDescription: `
+      Developed a powerful and easy-to-use NestJS library for integrating with the Nominatim API (OpenStreetMap geocoding service). 
+      This library provides a clean, type-safe interface for performing geocoding, reverse geocoding, and place lookups.
+      It features configurable in-memory and Redis caching for improved performance, multi-language support, health checks, and a native NestJS module with dependency injection.
+    `,
+    image: nestjs_nominatim_logo,
+    date: "Aug 2024",
+    link: "https://www.npmjs.com/package/nestjs-nominatim",
+    github: "https://github.com/aceiny/nestjs-nominatim",
+    features: [
+      "Forward Geocoding: Search for places by name or address",
+      "Reverse Geocoding: Get address information from coordinates",
+      "Place Lookup: Retrieve detailed information by OSM ID",
+      "Built-in configurable caching for improved performance (in-memory or Redis)",
+      "Native NestJS module with dependency injection",
+      "Multi-language address formatting",
+      "Type-safe with comprehensive interfaces",
+      "Built-in API health monitoring",
+    ],
+    challenges: [
+      "Designing a robust built-in caching system across in-memory and Redis stores",
+      "Structuring comprehensive interfaces and TypeScript types for various Nominatim API responses",
+      "Providing a flexible and safe configuration factory for NestJS injection",
+    ],
+    screenshots: [],
+    testimonial: null,
     nextProject: {
       slug: "prolink",
       title: "Prolink - B2B Professional Network",
