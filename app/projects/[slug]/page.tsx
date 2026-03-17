@@ -51,16 +51,17 @@ export default function ProjectPage() {
         animate="visible"
         variants={staggerContainer}
       >
-        <motion.div variants={fadeInUpSlow} className="flex items-center gap-4">
-          <Button as={Link} href="/projects" variant="light" isIconOnly>
+        <motion.div variants={fadeInUpSlow} className="flex items-start md:items-center gap-2 md:gap-4">
+          <Button as={Link} href="/projects" variant="light" isIconOnly className="mt-1 md:mt-0 shrink-0">
             <ChevronLeft className="w-6 h-6" />
           </Button>
-          <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-mono">{project.title}</h1>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
+            <h1 className="text-2xl md:text-3xl font-mono break-words">{project.title}</h1>
             {project.projectType && (
               <Chip
                 color={getProjectTypeColor(project.projectType)}
                 variant="shadow"
+                className="w-fit"
               >
                 {project.projectType}
               </Chip>

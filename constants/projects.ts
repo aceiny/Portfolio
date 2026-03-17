@@ -56,6 +56,8 @@ import prolink_logo from "@/public/projects/prolink/prolink-logo.png";
 //NestJS Nominatim
 import nestjs_nominatim_logo from "@/public/projects/nestjs-nominatim/nominatim.jpeg";
 
+//Pacman
+import pacman_logo from "@/public/projects/pacman/pacman_logo.png";
 export const featuredProjects = [
   {
     title: "Prolink - B2B Network",
@@ -659,4 +661,59 @@ export const projects = [
       title: "Prolink - B2B Professional Network",
     },
   },
+  {
+    title: "Pacman - Classic Arcade Clone",
+    slug: "pacman",
+    projectType: ProjectType.Personal,
+    description:
+      "A fully featured recreation of the classic Pac-Man arcade game built in Processing (Java). It features a custom text-based level parser, intelligent ghost AI pathfinding, persistent high scores, and save/load functionality.",
+    tech: [
+      "Processing",
+      "Java",
+      "Object-Oriented Programming (OOP)",
+      "Pathfinding Algorithms",
+      "File I/O"
+    ],
+    longDescription: `
+    Developed a complete clone of the classic Pac-Man arcade game from scratch using Processing and Java. 
+    Structured the project with a clean, modular Object-Oriented architecture, separating entities like Hero and Ghosts from the core game loop and rendering logic.
+    Implemented an intelligent ghost AI using algorithmic pathfinding (A* / BFS) to provide challenging and dynamic gameplay.
+    Created a custom text-based level parsing system that seamlessly reads and renders complex mazes from simple .txt files, enabling easy map creation and multi-level progression.
+    Built a robust state management system to handle smooth transitions between the main menu, active gameplay, and game over screens.
+    Engineered a comprehensive save/load system using File I/O to persist game progress and maintain a continuous high score leaderboard across different play sessions.
+    Handled precise grid-based movement and collision detection to emulate the authentic arcade feel.
+  `,
+    image: pacman_logo,
+    date: "2025",
+    link: null, 
+    github: "https://github.com/aceiny/Pacman",
+    features: [
+      "Intelligent Ghost AI & Pathfinding",
+      "Custom Text-Based Level Parsing",
+      "Multi-level Progression System",
+      "Save & Load Game Progress",
+      "Persistent High Scores Tracking",
+      "Dynamic Game Menu & UI",
+      "Grid-based Movement & Collision Detection",
+      "Modular Entity Management (Hero, Ghosts)"
+    ],
+    challenges: [
+      "Implementing efficient and bug-free pathfinding algorithms for multiple ghosts to dynamically chase the hero simultaneously.",
+      "Designing a robust level parser capable of accurately translating text file character grids into solid walls, paths, and collectable dots.",
+      "Managing complex game state transitions between the start menu, gameplay loop, pausing, and the game over sequence.",
+      "Handling precise grid alignment and fluid entity movement to ensure the hero and ghosts don't overlap or sequence break through walls.",
+      "Reading and writing persistent data cleanly without performance drops to handle the saveed states and high score logs."
+    ],
+    screenshots: [
+      // pacman_gameplay,
+      // pacman_menu,
+      // pacman_highscores,
+      // pacman_levels
+    ],
+    testimonial: null,
+    nextProject: {
+      slug: "survision",
+      title: "Survision",
+    },
+}
 ];
