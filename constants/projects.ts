@@ -58,6 +58,12 @@ import nestjs_nominatim_logo from "@/public/projects/nestjs-nominatim/nominatim.
 
 //Pacman
 import pacman_logo from "@/public/projects/pacman/pacman_logo.png";
+import pacman_gameplay from "@/public/projects/pacman/pacman_gameplay.png";
+import pacman_menu from "@/public/projects/pacman/pacman_menu.png";
+import pacman_highscores from "@/public/projects/pacman/pacman_highscores.png";
+import pacman_gameover from "@/public/projects/pacman/pacman_gameover.png";
+import pacman_power_mode from "@/public/projects/pacman/pacman_power_mode.png";
+
 export const featuredProjects = [
   {
     title: "Prolink - B2B Network",
@@ -705,10 +711,11 @@ export const projects = [
       "Reading and writing persistent data cleanly without performance drops to handle the saveed states and high score logs."
     ],
     screenshots: [
-      // pacman_gameplay,
-      // pacman_menu,
-      // pacman_highscores,
-      // pacman_levels
+      pacman_gameplay,
+      pacman_menu,
+      pacman_highscores,
+      pacman_gameover,
+      pacman_power_mode,
     ],
     testimonial: null,
     nextProject: {
